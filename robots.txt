@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onyx45.com/sitemap.xml
