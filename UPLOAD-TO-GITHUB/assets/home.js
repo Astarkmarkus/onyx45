@@ -13,9 +13,9 @@ const form=document.getElementById('intake-form'),review=document.getElementById
 const citySelect=document.getElementById('destination'),otherField=document.getElementById('other-city-field'),otherInput=document.getElementById('other-city-input');
 const picker=document.getElementById('language-picker'),toggle=document.getElementById('language-toggle');
 const menuToggle=document.querySelector('.menu-toggle'),navigation=document.getElementById('main-navigation');
-let errorState=false, currentStep=1, whatsappOpened=false;
+let errorState=false, currentStep=1, checkoutOpened=false, checkoutPackage=null;
 const referenceBytes=new Uint8Array(6);crypto.getRandomValues(referenceBytes);
-const enquiryReference='ONYX-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Array.from(referenceBytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
+let enquiryReference='ONYX-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Array.from(referenceBytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
 document.getElementById('enquiry-reference').textContent=enquiryReference;
 // Public hosted checkouts. Keep these exact package mappings in one place.
 const PAYMENT_LINKS = {
@@ -66,12 +66,12 @@ function updateCity(){
  document.querySelectorAll('[data-city]').forEach(link=>{if(link.dataset.city===citySelect.value)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});
 }
 function updatePets(){const yes=form.elements.pets.value==='Yes';document.getElementById('pet-details-field').hidden=!yes;form.elements.petDetails.disabled=!yes;form.elements.petDetails.required=yes;}
-function invalidateRequest(){whatsappOpened=false;consent.checked=false;immediateConsent.checked=false;document.getElementById('consent-error').hidden=true;syncPayment();}
+function invalidateRequest(){document.getElementById('paid-confirmation').checked=false;consent.checked=false;immediateConsent.checked=false;document.getElementById('consent-error').hidden=true;syncPayment();saveDraft();}
 function showStep(step,focus=true){
  currentStep=step;form.hidden=step===3;review.hidden=step!==3;
  document.getElementById('search-step').hidden=step!==1;document.getElementById('package-step').hidden=step!==2;
  for(let i=1;i<=3;i++){const el=document.getElementById('progress-'+i);if(i===step)el.setAttribute('aria-current','step');else el.removeAttribute('aria-current');}
- clearErrors();if(step===3)buildMessage();
+ clearErrors();if(step===3)buildMessage();saveDraft();
  if(focus)document.getElementById({1:'search-heading',2:'package-heading',3:'review-heading'}[step]).focus();
 }
 function clearErrors(){
@@ -108,7 +108,7 @@ function buildMessage(){
  const rows=searchRows(data),contact=[['k151',data.fullName],['k153',data.email],['k152',data.phone]];
  const lines=[t('greeting'),t('reference_label')+': '+enquiryReference,'',t('contact_details'),...contact.map(([k,v])=>t(k)+': '+v),'',t('your_search'),...rows.map(([k,v])=>t(k)+': '+v),'',t('your_package'),data.package+' — €'+pack.amount,t('booking_total',{count:pack.bookings})];
  if(data.creatorCode)lines.push('',t('creator_label')+': '+data.creatorCode,t('bonus_potential'),t('creator_verify'));
- lines.push('',t('period_review'),t('period_start'),'',t('closing'));preview.value=lines.join('\n');sendLink.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(preview.value);
+ lines.push('',t('period_review'),t('period_start'),'',t('closing'));lines.push('',t(document.getElementById('paid-confirmation').checked?'status_reported':'status_opened'));preview.value=lines.join('\n');sendLink.dataset.messageUrl='https://wa.me/'+PHONE+'?text='+encodeURIComponent(preview.value);
  const summary=document.getElementById('search-summary');summary.replaceChildren();for(const [heading,list]of [['your_search',rows],['contact_details',contact]]){appendText(summary,'h4',t(heading));const dl=appendText(summary,'dl','','summary-list');for(const [k,v]of list){appendText(dl,'dt',t(k));appendText(dl,'dd',v);}}
  const p=document.getElementById('package-summary');p.replaceChildren();appendText(p,'h4',data.package+' — €'+pack.amount);appendText(p,'p',t('booking_total',{count:pack.bookings}));
  if(data.creatorCode){const bonus=appendText(p,'div','','creator-bonus');appendText(bonus,'p',t('creator_label')+': '+data.creatorCode);appendText(bonus,'p',t('bonus_potential'));appendText(bonus,'p',t('bonus_total',{count:pack.bookings+1}));appendText(bonus,'p',t('creator_verify'),'micro');appendText(bonus,'p',t('price_unchanged'),'micro');}
@@ -117,12 +117,18 @@ function buildMessage(){
 function checkConsent(){const ok=consent.checked&&immediateConsent.checked,error=document.getElementById('consent-error');error.hidden=ok;[consent,immediateConsent].forEach(input=>{if(input.checked){input.removeAttribute('aria-invalid');input.removeAttribute('aria-describedby');}else{input.setAttribute('aria-invalid','true');input.setAttribute('aria-describedby','consent-error');}});if(!ok){error.textContent=t('payment_consent_error');(!consent.checked?consent:immediateConsent).focus();}return ok;}
 function selectedPaymentURL(){return PAYMENT_LINKS[String(form.elements.package.value).toLowerCase()]||null;}
 function syncPayment(){
- const pack=PRICES[form.elements.package.value];document.getElementById('payment-stage').hidden=!whatsappOpened;
+ const pack=PRICES[form.elements.package.value];document.getElementById('payment-stage').hidden=false;
  document.getElementById('payment-selection').textContent=pack?t('payment_selection',{package:form.elements.package.value,amount:pack.amount}):'';
  const code=String(form.elements.creatorCode.value||'').trim();document.getElementById('payment-bookings').textContent=pack?t('booking_total',{count:pack.bookings})+(code?' · '+t('bonus_total',{count:pack.bookings+1}):''):'';
- const enabled=CHECKOUT_ENABLED&&whatsappOpened&&consent.checked&&immediateConsent.checked&&currentStep===3&&Boolean(pack);
+ const enabled=CHECKOUT_ENABLED&&!packageMismatch()&&consent.checked&&immediateConsent.checked&&currentStep===3&&Boolean(pack);
  paymentLink.setAttribute('aria-disabled',String(!enabled));paymentLink.setAttribute('role','link');paymentLink.tabIndex=0;
  if(enabled)paymentLink.href=selectedPaymentURL();else paymentLink.removeAttribute('href');
+ document.getElementById('after-checkout').hidden=!checkoutOpened;
+ document.getElementById('package-mismatch').hidden=!packageMismatch();
+ document.getElementById('payment-status-text').textContent=t(document.getElementById('paid-confirmation').checked?'status_reported':'status_opened');
+ sendLink.setAttribute('aria-disabled',String(!orderReady()));
+ if(orderReady()&&sendLink.dataset.messageUrl)sendLink.href=sendLink.dataset.messageUrl;else sendLink.removeAttribute('href');
+ document.getElementById('print-order').disabled=!orderReady();
 
 }
 form.addEventListener('submit',event=>{event.preventDefault();if(currentStep===1)document.getElementById('next-package').click();else if(currentStep===2)document.getElementById('review-button').click();});
@@ -136,9 +142,9 @@ document.getElementById('edit-message').addEventListener('click',()=>{invalidate
 document.getElementById('change-package').addEventListener('click',()=>{invalidateRequest();showStep(2);});
 document.querySelectorAll('[data-city]').forEach(link=>link.addEventListener('click',()=>{citySelect.value=link.dataset.city;updateCity();invalidateRequest();showStep(1);citySelect.focus({preventScroll:true});}));
 document.querySelectorAll('[data-package]').forEach(link=>link.addEventListener('click',()=>{form.elements.package.value=link.dataset.package;invalidateRequest();showStep(1);}));
-sendLink.addEventListener('click',event=>{if(!validate(0)){event.preventDefault();return;}buildMessage();whatsappOpened=true;syncPayment();});
+sendLink.addEventListener('click',event=>{if(!orderReady()||!validate(0)){event.preventDefault();const e=document.getElementById('order-error');e.hidden=false;e.textContent=t('order_gate');return;}buildMessage();});
 paymentLink.addEventListener('keydown',event=>{if(event.key==='Enter'&&!paymentLink.hasAttribute('href')){event.preventDefault();checkConsent();}});
-paymentLink.addEventListener('click',event=>{if(!CHECKOUT_ENABLED||!whatsappOpened||currentStep!==3||!checkConsent()||!validate(0)){event.preventDefault();return;}paymentLink.href=selectedPaymentURL();});
+paymentLink.addEventListener('click',event=>{if(!CHECKOUT_ENABLED||packageMismatch()||currentStep!==3||!checkConsent()||!validate(0)){event.preventDefault();return;}paymentLink.href=selectedPaymentURL();checkoutOpened=true;checkoutPackage=form.elements.package.value;saveDraft();buildMessage();});
 for(const a of document.querySelectorAll('a[href="#service-terms"],a[href="#privacy-policy"],a[href="#refund-policy"],a[href="#payment-policy"]'))a.addEventListener('click',()=>{const section=document.querySelector(a.getAttribute('href'));section.open=true;});
 picker.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>{applyLanguage(button.dataset.language,{save:true,updateURL:true});picker.open=false;toggle.focus();}));
 document.addEventListener('click',event=>{if(!picker.contains(event.target))picker.open=false;});
@@ -151,14 +157,28 @@ function updateMobileBar(){const inView=sections.some(section=>{const r=section.
 function scheduleBarUpdate(){if(!scheduled){scheduled=true;requestAnimationFrame(()=>{updateMobileBar();scheduled=false;});}}
 window.addEventListener('scroll',scheduleBarUpdate,{passive:true});window.addEventListener('resize',scheduleBarUpdate);
 function syncInfoLinks(){document.querySelectorAll('[data-info-path]').forEach(a=>{a.setAttribute('href',a.dataset.infoPath+'?lang='+encodeURIComponent(language));});}
+
+const DRAFT_KEY='onyx-draft-v1';let restoring=true;
+function packageMismatch(){return checkoutOpened&&checkoutPackage!==form.elements.package.value;}
+function orderReady(){return currentStep===3&&checkoutOpened&&!packageMismatch()&&consent.checked&&immediateConsent.checked&&document.getElementById('paid-confirmation').checked;}
+function saveDraft(){if(restoring)return;try{sessionStorage.setItem(DRAFT_KEY,JSON.stringify({version:1,expiresAt:Date.now()+86400000,data:currentData(),step:currentStep,reference:enquiryReference,checkoutOpened,checkoutPackage}));}catch(e){document.getElementById('draft-notice').textContent=t('draft_unavailable');}}
+function restoreDraft(){try{const d=JSON.parse(sessionStorage.getItem(DRAFT_KEY)||'null');if(!d)return false;if(d.version!==1||d.expiresAt<Date.now()){sessionStorage.removeItem(DRAFT_KEY);return false;}if(!d.data||typeof d.data!=='object')return false;for(const key of Object.keys(currentData())){const field=form.elements.namedItem(key);if(field&&typeof d.data[key]==='string')field.value=d.data[key].slice(0,4000);}if(/^ONYX-\d{8}-[A-F0-9]{12}$/.test(d.reference))enquiryReference=d.reference;checkoutOpened=d.checkoutOpened===true&&Boolean(PRICES[d.checkoutPackage]);checkoutPackage=checkoutOpened?d.checkoutPackage:null;currentStep=[1,2,3].includes(d.step)?d.step:1;return true;}catch(e){return false;}}
+document.getElementById('paid-confirmation').addEventListener('change',()=>{document.getElementById('order-error').hidden=true;buildMessage();});
+document.getElementById('clear-draft').addEventListener('click',()=>{restoring=true;try{sessionStorage.removeItem(DRAFT_KEY);}catch(e){}form.reset();consent.checked=false;immediateConsent.checked=false;document.getElementById('paid-confirmation').checked=false;checkoutOpened=false;checkoutPackage=null;const bytes=new Uint8Array(6);crypto.getRandomValues(bytes);enquiryReference='ONYX-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();document.getElementById('enquiry-reference').textContent=enquiryReference;document.getElementById('draft-feedback').hidden=true;updateCity();updatePets();showStep(1);syncPayment();restoring=false;});
+document.getElementById('print-order').addEventListener('click',()=>{if(!orderReady()||!validate(0))return;buildMessage();const sheet=document.getElementById('print-summary');sheet.replaceChildren();appendText(sheet,'h1','ONYX HOUSING');appendText(sheet,'h2',t('summary_title'));appendText(sheet,'p',t('summary_disclaimer'));appendText(sheet,'pre',preview.value);appendText(sheet,'p','housing@onyx45.com · onyx45.com');sheet.hidden=false;const title=document.title;document.title=enquiryReference;window.addEventListener('afterprint',()=>{document.title=title;sheet.hidden=true;},{once:true});window.print();});
+
 const parameters=new URLSearchParams(location.search);let saved=null;try{saved=localStorage.getItem(LANGUAGE_STORAGE_KEY);}catch(error){}
 const initial=normalizeLanguage(parameters.get('lang'))||normalizeLanguage(saved)||'en';
-const initialCity=parameters.get('city');if(cityIds.includes(initialCity)||initialCity==='other')citySelect.value=initialCity;
+const restored=restoreDraft();document.getElementById('enquiry-reference').textContent=enquiryReference;
+const initialCity=parameters.get('city');if(!restored&&(cityIds.includes(initialCity)||initialCity==='other'))citySelect.value=initialCity;
 // A referral only pre-fills editable text. It is never treated as validation.
-const ref=parameters.get('ref');if(ref)form.elements.creatorCode.value=ref.replace(/[\u0000-\u001f\u007f]/g,'').slice(0,60);
-updateCity();updatePets();showStep(1,false);document.getElementById('intake-ui').hidden=false;picker.hidden=false;document.documentElement.classList.add('js');
-applyLanguage(initial,{save:true});updateMobileBar();
+const ref=parameters.get('ref');if(ref&&!restored)form.elements.creatorCode.value=ref.replace(/[\u0000-\u001f\u007f]/g,'').slice(0,60);
+updateCity();updatePets();showStep(currentStep,false);restoring=false;document.getElementById('intake-ui').hidden=false;picker.hidden=false;document.documentElement.classList.add('js');
+applyLanguage(initial,{save:true});if(restored){const e=document.getElementById('draft-feedback');e.hidden=false;e.textContent=t('restored');}updateMobileBar();
 const partnerTabs=Array.from(document.querySelectorAll('.partner-tabs [role="tab"]'));
 function selectPartner(tab,focus=false){partnerTabs.forEach(item=>{const selected=item===tab;item.setAttribute('aria-selected',String(selected));item.tabIndex=selected?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!selected;});if(focus)tab.focus();}
 partnerTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectPartner(tab));tab.addEventListener('keydown',event=>{let next;if(event.key==='Home')next=0;else if(event.key==='End')next=partnerTabs.length-1;else if(event.key==='ArrowRight')next=(index+(document.documentElement.dir==='rtl'?-1:1)+partnerTabs.length)%partnerTabs.length;else if(event.key==='ArrowLeft')next=(index+(document.documentElement.dir==='rtl'?1:-1)+partnerTabs.length)%partnerTabs.length;if(next!==undefined){event.preventDefault();selectPartner(partnerTabs[next],true);}});});
+
+picker.addEventListener('keydown',event=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(event.key))return;event.preventDefault();picker.open=true;const buttons=[...picker.querySelectorAll('[data-language]')];const i=buttons.indexOf(document.activeElement);const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length;buttons[next].focus();});
+
 })();
