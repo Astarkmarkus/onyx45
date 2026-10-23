@@ -1,0 +1,38 @@
+{
+  "home": {
+    "en": "/",
+    "sv": "/sv/"
+  },
+  "services": {
+    "en": "/services/",
+    "sv": "/sv/tjanster/"
+  },
+  "approach": {
+    "en": "/approach/",
+    "sv": "/sv/arbetssatt/"
+  },
+  "about": {
+    "en": "/about/",
+    "sv": "/sv/om-oss/"
+  },
+  "insights": {
+    "en": "/insights/",
+    "sv": "/sv/insikter/"
+  },
+  "contact": {
+    "en": "/contact/",
+    "sv": "/sv/kontakt/"
+  },
+  "privacy": {
+    "en": "/privacy/",
+    "sv": "/sv/integritet/"
+  },
+  "cookies": {
+    "en": "/cookies/",
+    "sv": "/sv/cookies/"
+  },
+  "terms": {
+    "en": "/terms/",
+    "sv": "/sv/villkor/"
+  }
+}
