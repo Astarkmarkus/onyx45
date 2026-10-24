@@ -28,3 +28,16 @@
 - Legal operator/controller identity, applicable registration/address, privacy contact, retention schedule and jurisdiction-specific policy details still require real owner input. Policy templates do not certify compliance.
 - Browser tests used an internal preview and responsive frames, not a physical-device or assistive-technology lab. No independent full WCAG audit, production Lighthouse score or real-user Core Web Vitals measurement is claimed.
 - Hosting-level TLS/headers, DNS, email authentication and any Cloudflare automatic injection were not changed or independently certified.
+
+
+## Refinement — 24 October 2026
+
+- 18 localized pages passed route/asset/fragment, unique ID, heading, canonical and CNAME checks.
+- English and Swedish Services now have 20 expandable feature rows each. Programmatic tests covered open/close, animation/reduced-motion paths and rapid toggles. Real browser tests confirmed mouse, Enter and Space activation and mobile interaction.
+- Services rendered without document overflow at 320, 375, 430, 768, 1024 and 1440 CSS-pixel frame widths (usable widths exclude the browser scrollbar). All 18 localized pages passed a 320-pixel frame overflow check.
+- Real-browser contact validation and email-draft generation passed. The generated mailto recipient is markus@onyx45.com and the draft includes the selected service and entered fields. No message was sent, and inbox delivery is not claimed.
+- Optional provider behavior remains tested using mocked success, server failure, network failure and malformed response; failures preserve values and do not show success. Double-submit protection and both privacy choices passed.
+- Removed Insights from primary navigation while retaining existing routes. All CTA destinations remain valid. Fixed the English mobile menu's initial accessible label.
+- CNAME, robots.txt, sitemap.xml, GitHub Pages infrastructure and existing canonical/hreflang URLs are unchanged. No dependencies or third-party browser scripts were added.
+- No framework build, TypeScript or lint configuration exists. JavaScript syntax and the repository's static verifier passed.
+- Outstanding owner work: verify the mailbox receives a real test email; provide real operator/controller details and retention/processing facts for the legal templates. Direct in-page delivery requires an activated form backend and corresponding privacy copy update.

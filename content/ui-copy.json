@@ -5,7 +5,6 @@
       "Services",
       "Our Approach",
       "About",
-      "Insights",
       "Contact"
     ],
     "book": "Book a Consultation",
@@ -74,14 +73,15 @@
     "services_title": "The right work.\nMoving together.",
     "services_lead": "Whether you need support with a single campaign, qualified sales meetings, or an entire customer acquisition project, ONYX45 brings the people, processes and execution together.",
     "paid_kicker": "REACH THE RIGHT PEOPLE",
-    "paid_body": "Start with TikTok Ads. We help connect your business goals to a campaign plan, a considered audience and ongoing hands-on management. Google Ads and Meta Ads can be discussed on a case-by-case basis.",
+    "paid_body": "From campaign strategy and audience targeting to launch, optimization and reporting, ONYX45 helps businesses plan and manage paid advertising campaigns built around their goals.",
     "paid_list": [
-      "Advertising strategy & campaign planning",
-      "TikTok Ads account onboarding & campaign setup",
-      "Audience research & budget planning",
-      "Conversion tracking guidance",
-      "Performance reporting",
-      "Optimization & ongoing management"
+      "Campaign Strategy & Planning",
+      "Audience Research & Targeting",
+      "Advertising Platform Selection",
+      "Campaign Setup & Launch",
+      "Tracking & Performance Measurement",
+      "Campaign Management & Optimization",
+      "Performance Reporting"
     ],
     "paid_outcome": "A clear campaign plan, an agreed budget and reporting connected to your objectives.",
     "paid_note": "Advertising budgets are paid separately from management fees. Results depend on factors including your offer, creative, audience and market; specific outcomes are not guaranteed.",
@@ -180,16 +180,170 @@
     "email_error": "Enter a valid email address.",
     "length_error": "Please add a little more detail (at least 20 characters).",
     "form_privacy": "We use your details to respond to this enquiry. Read our Privacy Policy.",
-    "unconfigured": "Online consultation requests are not available yet. Please check back shortly.",
+    "unconfigured": "Complete the form to prepare an email to markus@onyx45.com, then open the draft in your email app. You must send the email to submit your enquiry.",
     "cookie_title": "Your privacy,\nyour choice.",
-    "cookie_body": "This website uses no advertising or analytics trackers. We only store your chosen language and privacy preference in this browser. Consultation details are sent to our form provider only when you submit.",
+    "cookie_body": "This website uses no advertising or analytics trackers. We only store your chosen language and privacy preference in this browser. Enquiry details stay in your browser until you choose to send them using your email app.",
     "cookie_accept": "Use necessary preferences",
     "cookie_reject": "Continue without saving language",
     "cookie_saved": "Privacy preference saved.",
     "cookie_details": "Read Cookie Policy",
     "not_found": "This page has\nmoved on.",
     "not_found_copy": "The address may have changed. Find your next step from the homepage.",
-    "back": "Back to home"
+    "back": "Back to home",
+    "advertising_refinement": {
+      "headline": "Advertising built around your business.",
+      "description": "From campaign strategy and audience targeting to launch, optimization and reporting, ONYX45 helps businesses plan and manage paid advertising campaigns built around their goals.",
+      "support": "The right advertising channels depend on your audience, objectives and market. We help you select and manage the approach that fits your business.",
+      "targetTitle": "Advertising campaigns & targeting",
+      "target": "We shape the campaign around your objectives, target audience, geographic market, available budget and customer acquisition goals, then assess which advertising platforms suit the plan.",
+      "platforms": "Platforms we can work with",
+      "channels": [
+        [
+          "TikTok Ads",
+          "Audience discovery, awareness, traffic and creative-driven campaigns."
+        ],
+        [
+          "Meta Ads",
+          "Facebook and Instagram campaigns for awareness, engagement, leads and customer acquisition."
+        ],
+        [
+          "Google Ads",
+          "Search-led campaigns that reach audiences showing relevant intent."
+        ],
+        [
+          "Other channels",
+          "Additional platforms may be considered depending on your business, objectives and available resources."
+        ]
+      ],
+      "process": "How we work",
+      "steps": [
+        [
+          "Discover",
+          "We learn about your business, objectives, audience and available resources."
+        ],
+        [
+          "Plan",
+          "We define the advertising approach, campaign structure and suitable channels."
+        ],
+        [
+          "Launch",
+          "We prepare and activate the agreed campaigns."
+        ],
+        [
+          "Improve",
+          "We monitor performance, optimize and report on progress."
+        ]
+      ],
+      "features": [
+        [
+          [
+            "Campaign Strategy & Planning",
+            "We develop a campaign approach based on your objectives, positioning, ideal customers, available budget and the actions you want your audience to take."
+          ],
+          [
+            "Audience Research & Targeting",
+            "We identify relevant customer segments, demographics, interests, search intent and geographic markets to guide targeting decisions."
+          ],
+          [
+            "Advertising Platform Selection",
+            "We assess suitable channels against your objectives, audience and resources, and agree the platform mix before setup."
+          ],
+          [
+            "Campaign Setup & Launch",
+            "We prepare the campaign structure, platform configuration and agreed assets, check the setup and coordinate launch."
+          ],
+          [
+            "Tracking & Performance Measurement",
+            "We plan conversion tracking, agree performance indicators and identify measurement requirements and any technical support needed."
+          ],
+          [
+            "Campaign Management & Optimization",
+            "We review available performance data and adjust targeting, budgets and campaign settings within the agreed scope."
+          ],
+          [
+            "Performance Reporting",
+            "We report on agreed metrics, explain what the results indicate and recommend practical next steps."
+          ]
+        ],
+        [
+          [
+            "Ideal Customer Profile",
+            "We agree which companies and decision-makers fit your offer, including useful qualification criteria and exclusions."
+          ],
+          [
+            "Prospect & Account Research",
+            "We research relevant target accounts and business contacts, organizing the findings for focused outreach."
+          ],
+          [
+            "Decision-Maker Outreach",
+            "We plan relevant messaging and conduct agreed outreach, including cold calling where appropriate and lawful."
+          ],
+          [
+            "Email Outreach",
+            "Where lawful, we plan relevant business emails and follow-up, respecting applicable privacy rules, objections and opt-outs."
+          ],
+          [
+            "Qualification & Appointment Setting",
+            "We qualify interest against agreed criteria and coordinate sales appointments with relevant prospects. Any meeting commitments are defined in your agreement."
+          ],
+          [
+            "Pipeline & Campaign Reporting",
+            "We organize outreach activity, lead status and follow-up responsibilities, with reporting that shows progress and next actions."
+          ]
+        ],
+        [
+          [
+            "Growth Strategy & Roadmap",
+            "We bring your acquisition goals into a practical plan with agreed priorities, deliverables and responsibilities."
+          ],
+          [
+            "Advertising Management",
+            "We coordinate campaign planning, launch, management and optimization as part of the wider acquisition project."
+          ],
+          [
+            "Prospecting & Outreach",
+            "We connect target account research and outreach to the same customer profile, offer and campaign priorities."
+          ],
+          [
+            "Lead Handling & Qualification",
+            "We organize incoming and outbound opportunities, agree qualification criteria and coordinate timely follow-up."
+          ],
+          [
+            "Sales Appointment Setting",
+            "We coordinate qualified sales conversations and handovers, so the next step and owner are clear."
+          ],
+          [
+            "Project Management & Coordination",
+            "We manage dependencies, responsibilities and progress across the agreed marketing and sales activities."
+          ],
+          [
+            "Reporting & Improvement",
+            "We bring agreed indicators into a connected progress view and use the findings to recommend improvements."
+          ]
+        ]
+      ],
+      "emailNotice": "Complete the form to prepare an email to markus@onyx45.com, then open the draft in your email app. You must send the email to submit your enquiry.",
+      "submit": "Prepare enquiry email",
+      "draft": "Your email draft is ready. Send it from your email app to complete your enquiry. Preparing a draft does not submit it.",
+      "open": "Open email draft",
+      "copy": "Copy enquiry",
+      "copied": "Enquiry copied.",
+      "copyError": "Select and copy the enquiry below.",
+      "direct": "Prefer to get in touch directly?",
+      "phone": "Call +34 673 081 311",
+      "fallback": "If your email app does not open, copy the enquiry below and email it to markus@onyx45.com.",
+      "ready": "Your enquiry",
+      "subject": "ONYX45 consultation enquiry",
+      "labels": [
+        "Name",
+        "Business email",
+        "Company",
+        "Service",
+        "Telephone",
+        "Business needs"
+      ],
+      "privacy": "For privacy questions or requests, contact markus@onyx45.com."
+    }
   },
   "sv": {
     "nav": [
@@ -197,7 +351,6 @@
       "Tjänster",
       "Vårt arbetssätt",
       "Om oss",
-      "Insikter",
       "Kontakt"
     ],
     "book": "Boka ett samtal",
@@ -266,14 +419,15 @@
     "services_title": "Rätt insatser.\nI samma riktning.",
     "services_lead": "Oavsett om ni behöver hjälp med en enskild kampanj, kvalificerade säljmöten eller ett helt kundanskaffningsprojekt samlar ONYX45 människorna, processerna och genomförandet.",
     "paid_kicker": "NÅ RÄTT MÄNNISKOR",
-    "paid_body": "Vi börjar med TikTok Ads och hjälper er att koppla affärsmålen till en kampanjplan, en genomtänkt målgrupp och löpande hantering. Google Ads och Meta Ads kan diskuteras utifrån era behov.",
+    "paid_body": "Från kampanjstrategi och målgruppsarbete till lansering, optimering och rapportering hjälper ONYX45 företag att planera och hantera annonsering utifrån sina mål.",
     "paid_list": [
-      "Annonsstrategi och kampanjplanering",
-      "Uppstart av TikTok Ads-konto och kampanjer",
-      "Målgruppsanalys och budgetplanering",
-      "Vägledning om konverteringsmätning",
-      "Resultatrapportering",
-      "Optimering och löpande hantering"
+      "Kampanjstrategi & planering",
+      "Målgruppsanalys & inriktning",
+      "Val av annonsplattform",
+      "Kampanjuppstart & lansering",
+      "Spårning & resultatmätning",
+      "Kampanjhantering & optimering",
+      "Resultatrapportering"
     ],
     "paid_outcome": "En tydlig kampanjplan, en överenskommen budget och rapportering kopplad till era mål.",
     "paid_note": "Annonsbudgeten betalas separat från arvodet för hantering. Resultatet påverkas bland annat av erbjudandet, annonsmaterialet, målgruppen och marknaden. Specifika resultat garanteras inte.",
@@ -372,15 +526,169 @@
     "email_error": "Ange en giltig e-postadress.",
     "length_error": "Beskriv gärna lite mer (minst 20 tecken).",
     "form_privacy": "Vi använder uppgifterna för att besvara förfrågan. Läs vår integritetspolicy.",
-    "unconfigured": "Förfrågningar via formuläret är inte tillgängliga ännu. Välkommen tillbaka inom kort.",
+    "unconfigured": "Fyll i formuläret för att förbereda ett mejl till markus@onyx45.com och öppna sedan utkastet i er e-postapp. Ni behöver skicka mejlet för att lämna förfrågan.",
     "cookie_title": "Din integritet.\nDitt val.",
-    "cookie_body": "Webbplatsen använder inga annons- eller analysspårare. Vi sparar bara ditt språkval och din integritetsinställning i webbläsaren. Uppgifter i formuläret skickas till formulärtjänsten först när du skickar förfrågan.",
+    "cookie_body": "Webbplatsen använder inga annons- eller analysspårare. Vi sparar bara valt språk och integritetsval i den här webbläsaren. Förfrågans innehåll stannar i webbläsaren tills ni väljer att skicka det via er e-postapp.",
     "cookie_accept": "Använd nödvändiga inställningar",
     "cookie_reject": "Fortsätt utan att spara språk",
     "cookie_saved": "Integritetsinställningen har sparats.",
     "cookie_details": "Läs cookiepolicyn",
     "not_found": "Sidan har\nflyttat vidare.",
     "not_found_copy": "Adressen kan ha ändrats. Hitta nästa steg från startsidan.",
-    "back": "Till startsidan"
+    "back": "Till startsidan",
+    "advertising_refinement": {
+      "headline": "Annonsering med ert företag som utgångspunkt.",
+      "description": "Från kampanjstrategi och målgruppsarbete till lansering, optimering och rapportering hjälper ONYX45 företag att planera och hantera annonsering utifrån sina mål.",
+      "support": "Rätt annonskanaler beror på er målgrupp, era mål och er marknad. Vi hjälper er att välja och hantera ett upplägg som passar företaget.",
+      "targetTitle": "Annonskampanjer & målgrupper",
+      "target": "Vi utgår från era kampanjmål, målgrupper, geografiska marknader, er budget och era mål för kundanskaffning. Därefter bedömer vi vilka annonsplattformar som passar planen.",
+      "platforms": "Plattformar vi kan arbeta med",
+      "channels": [
+        [
+          "TikTok Ads",
+          "Kampanjer för att nå nya målgrupper, bygga kännedom och driva trafik med kreativt annonsmaterial."
+        ],
+        [
+          "Meta Ads",
+          "Facebook- och Instagram-kampanjer för kännedom, engagemang, leads och kundanskaffning."
+        ],
+        [
+          "Google Ads",
+          "Sökbaserade kampanjer som når personer med relevant sökintresse."
+        ],
+        [
+          "Andra kanaler",
+          "Ytterligare plattformar kan övervägas utifrån verksamheten, kampanjmålen och tillgängliga resurser."
+        ]
+      ],
+      "process": "Så arbetar vi",
+      "steps": [
+        [
+          "Förstå",
+          "Vi lär känna ert företag, era mål, er målgrupp och era resurser."
+        ],
+        [
+          "Planera",
+          "Vi definierar annonsstrategin, kampanjstrukturen och lämpliga kanaler."
+        ],
+        [
+          "Lansera",
+          "Vi förbereder och aktiverar de överenskomna kampanjerna."
+        ],
+        [
+          "Förbättra",
+          "Vi följer upp resultaten, optimerar och rapporterar utvecklingen."
+        ]
+      ],
+      "features": [
+        [
+          [
+            "Kampanjstrategi & planering",
+            "Vi tar fram ett kampanjupplägg utifrån era mål, er positionering, era idealkunder, er budget och vad ni vill att målgruppen ska göra."
+          ],
+          [
+            "Målgruppsanalys & inriktning",
+            "Vi identifierar relevanta kundsegment, demografiska faktorer, intressen, sökintentioner och geografiska marknader som grund för målgruppsarbetet."
+          ],
+          [
+            "Val av annonsplattform",
+            "Vi bedömer vilka kanaler som passar era mål, er målgrupp och era resurser och kommer överens om kanalvalet före uppstart."
+          ],
+          [
+            "Kampanjuppstart & lansering",
+            "Vi förbereder kampanjstruktur, plattformsinställningar och överenskommet material, kontrollerar upplägget och samordnar lanseringen."
+          ],
+          [
+            "Spårning & resultatmätning",
+            "Vi planerar konverteringsmätning, kommer överens om nyckeltal och identifierar mätkrav och eventuellt behov av tekniskt stöd."
+          ],
+          [
+            "Kampanjhantering & optimering",
+            "Vi analyserar tillgängliga resultat och justerar målgrupper, budgetar och kampanjinställningar inom den avtalade omfattningen."
+          ],
+          [
+            "Resultatrapportering",
+            "Vi rapporterar överenskomna nyckeltal, förklarar vad resultaten visar och rekommenderar konkreta nästa steg."
+          ]
+        ],
+        [
+          [
+            "Ideal kundprofil",
+            "Vi definierar vilka företag och beslutsfattare som passar ert erbjudande, med tydliga kvalificeringskriterier och avgränsningar."
+          ],
+          [
+            "Prospekt- & företagsanalys",
+            "Vi undersöker relevanta målföretag och affärskontakter och strukturerar underlaget för riktad bearbetning."
+          ],
+          [
+            "Kontakt med beslutsfattare",
+            "Vi planerar relevanta budskap och genomför avtalad bearbetning, inklusive kalla samtal där det är lämpligt och tillåtet."
+          ],
+          [
+            "E-postbearbetning",
+            "Där det är tillåtet planerar vi relevanta affärsmejl och uppföljning med hänsyn till integritetsregler, invändningar och avregistrering."
+          ],
+          [
+            "Kvalificering & mötesbokning",
+            "Vi kvalificerar intresset utifrån överenskomna kriterier och samordnar säljmöten med relevanta prospekt. Eventuella mötesåtaganden regleras i ert avtal."
+          ],
+          [
+            "Säljpipeline & rapportering",
+            "Vi strukturerar bearbetning, leadstatus och uppföljningsansvar och rapporterar framsteg och nästa åtgärder."
+          ]
+        ],
+        [
+          [
+            "Tillväxtstrategi & genomförandeplan",
+            "Vi omsätter era kundanskaffningsmål i en praktisk plan med överenskomna prioriteringar, leveranser och ansvar."
+          ],
+          [
+            "Annonshantering",
+            "Vi samordnar kampanjplanering, lansering, hantering och optimering som en del av kundanskaffningsprojektet."
+          ],
+          [
+            "Prospektering & bearbetning",
+            "Vi kopplar samman analys av målföretag och bearbetning med samma kundprofil, erbjudande och kampanjprioriteringar."
+          ],
+          [
+            "Leadhantering & kvalificering",
+            "Vi strukturerar inkommande och uppsökande affärsmöjligheter, definierar kvalificeringskrav och samordnar uppföljningen."
+          ],
+          [
+            "Bokning av säljmöten",
+            "Vi samordnar kvalificerade säljsamtal och överlämningar så att nästa steg och ansvarig är tydliga."
+          ],
+          [
+            "Projektledning & samordning",
+            "Vi håller ihop beroenden, ansvar och framsteg mellan de överenskomna marknadsförings- och försäljningsinsatserna."
+          ],
+          [
+            "Rapportering & förbättring",
+            "Vi samlar överenskomna nyckeltal i en gemensam lägesbild och använder resultaten för att rekommendera förbättringar."
+          ]
+        ]
+      ],
+      "emailNotice": "Fyll i formuläret för att förbereda ett mejl till markus@onyx45.com och öppna sedan utkastet i er e-postapp. Ni behöver skicka mejlet för att lämna förfrågan.",
+      "submit": "Förbered förfrågan via mejl",
+      "draft": "Ert mejlutkast är klart. Skicka det från er e-postapp för att lämna förfrågan. Ett förberett utkast innebär inte att förfrågan har skickats.",
+      "open": "Öppna mejlutkast",
+      "copy": "Kopiera förfrågan",
+      "copied": "Förfrågan har kopierats.",
+      "copyError": "Markera och kopiera förfrågan nedan.",
+      "direct": "Vill ni kontakta oss direkt?",
+      "phone": "Ring +34 673 081 311",
+      "fallback": "Om e-postappen inte öppnas kan ni kopiera förfrågan nedan och mejla den till markus@onyx45.com.",
+      "ready": "Er förfrågan",
+      "subject": "Konsultationsförfrågan till ONYX45",
+      "labels": [
+        "Namn",
+        "E-post i arbetet",
+        "Företag",
+        "Tjänst",
+        "Telefon",
+        "Företagets behov"
+      ],
+      "privacy": "För integritetsfrågor eller förfrågningar om personuppgifter, kontakta markus@onyx45.com."
+    }
   }
 }

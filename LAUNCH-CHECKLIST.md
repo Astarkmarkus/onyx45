@@ -2,8 +2,9 @@
 
 ## Required before live lead collection
 
-- [ ] Verify a Formspree recipient mailbox, activate the endpoint and configure `assets/site-config.js`.
-- [ ] Confirm real provider delivery with a test submission; no actual submission was sent during development.
+- [x] Publish owner-supplied email and telephone, plus an honest email-draft contact fallback.
+- [ ] Owner: confirm markus@onyx45.com receives a real test email. No message was sent during development.
+- [ ] Optional direct-submit backend: activate Formspree, verify delivery and update the bilingual privacy processing notice before enabling the endpoint.
 - [ ] Confirm the legal name of the operator and data controller. No registered-entity claim has been invented.
 - [ ] Provide applicable company/tax registration, service address and a verified contact for privacy requests.
 - [ ] Set an actual retention schedule, lawful bases appropriate to the operator, provider locations/international transfer safeguards, complaint information and any jurisdiction-specific obligations with suitable advice.
@@ -12,9 +13,9 @@
 ## Optional verified information
 
 - Add a founder profile after the two About story paragraphs once the name, role, approved biography and photo are verified. No empty public profile is shown.
-- Publish only genuine articles with actual publication dates using the article helper. The Insights empty state is deliberate.
+- Publish only genuine articles with actual publication dates using the article helper. Insights stays out of primary navigation until articles exist.
 - Add only authentic, approved case studies, testimonials, certifications or platform partnerships if they become available.
-- Add a public business email only after confirming that mailbox is appropriate for the new agency. Existing housing contacts are not reused automatically.
+- Contact details now use the owner-supplied markus@onyx45.com and +34 673 081 311.
 
 ## Hosting checks
 
