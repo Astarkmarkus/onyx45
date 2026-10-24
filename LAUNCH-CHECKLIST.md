@@ -2,9 +2,9 @@
 
 ## Required before live lead collection
 
-- [x] Publish owner-supplied email and telephone, plus an honest email-draft contact fallback.
+- [x] Publish owner-supplied email and telephone, plus direct Web3Forms contact submission.
 - [ ] Owner: confirm markus@onyx45.com receives a real test email. No message was sent during development.
-- [ ] Optional direct-submit backend: activate Formspree, verify delivery and update the bilingual privacy processing notice before enabling the endpoint.
+- [ ] Confirm Web3Forms recipient markus@onyx45.com, Advanced Spam Filter enabled and Basic Spam Protection Level. The existing key is reused; no new account or paid feature is introduced.
 - [ ] Confirm the legal name of the operator and data controller. No registered-entity claim has been invented.
 - [ ] Provide applicable company/tax registration, service address and a verified contact for privacy requests.
 - [ ] Set an actual retention schedule, lawful bases appropriate to the operator, provider locations/international transfer safeguards, complaint information and any jurisdiction-specific obligations with suitable advice.
@@ -28,5 +28,5 @@
 ## Sources consulted
 
 - GitHub Pages publishing sources: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-- Formspree HTML setup: https://help.formspree.io/articles/building-your-form/building-an-html-form/
-- Formspree honeypot: https://help.formspree.io/articles/building-your-form/honeypot-spam-filtering
+- Web3Forms API: https://docs.web3forms.com/getting-started/api-reference
+- Web3Forms JavaScript: https://docs.web3forms.com/how-to-guides/html-and-javascript

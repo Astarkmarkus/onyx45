@@ -20,22 +20,52 @@ document.querySelectorAll('.feature-toggle').forEach(button=>button.addEventList
  content.style.height=(open?content.scrollHeight:0)+'px';
  featureTimers.set(content,setTimeout(()=>{content.hidden=!open;content.style.height='';},240));
 }));
-// No ad pixels, analytics beacons, external fonts, or remote scripts are loaded.
+// Direct browser-to-Web3Forms submission; no email-draft or mailto submission path.
 const form=document.getElementById('contact-form');if(!form)return;
-const config=window.ONYX45_CONFIG||{},endpoint=config.formEndpoint||'',configured=endpoint==='https://api.web3forms.com/submit'&&/^[0-9a-f-]{36}$/i.test(config.formAccessKey||''),submit=document.getElementById('form-submit'),status=document.getElementById('form-status'),errors=document.getElementById('form-errors'),availability=document.getElementById('form-availability');let sending=false,errorVisible=false;
-if(configured){form.action=endpoint;availability.hidden=true;submit.disabled=false;submit.textContent=copy.submit;}else{availability.hidden=false;availability.textContent=copy.email_notice;submit.disabled=false;submit.textContent=copy.email_submit;}
-document.getElementById('email-copy')?.addEventListener('click',async()=>{const draft=document.getElementById('email-draft'),notice=document.getElementById('email-copy-status');try{await navigator.clipboard.writeText(draft.value);notice.textContent=copy.email_copied;}catch{draft.focus();draft.select();notice.textContent=copy.email_copy_error;}});
+const config=window.ONYX45_CONFIG||{},endpoint='https://api.web3forms.com/submit';
+const configured=config.formEndpoint===endpoint&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(config.formAccessKey||'');
+const submit=document.getElementById('form-submit'),status=document.getElementById('form-status'),errors=document.getElementById('form-errors'),availability=document.getElementById('form-availability');
+let sending=false;
+// Static labels also work before JavaScript loads. Configuration failures never fall back to a draft.
+submit.textContent=copy.submit;submit.disabled=!configured;availability.hidden=configured;
+if(!configured)availability.textContent=copy.unconfigured;
 const service=new URLSearchParams(location.search).get('service');if(['1','2','3','4'].includes(service))form.elements.service.value=service;
-function validate(){let first=null;for(const input of form.querySelectorAll('input:not([name="_gotcha"]),select,textarea')){const el=document.getElementById('error-'+input.name);let text='';if(input.required&&!input.value.trim())text=copy.required;else if(input.type==='email'&&input.validity.typeMismatch)text=copy.email_error;else if(input.name==='message'&&input.value.trim().length<20)text=copy.length_error;if(el)el.textContent=text;input.removeAttribute('aria-invalid');const existing=(input.getAttribute('aria-describedby')||'').split(' ').filter(v=>v&&!v.startsWith('error-'));if(text){first=first||input;input.setAttribute('aria-invalid','true');existing.push('error-'+input.name);}if(existing.length)input.setAttribute('aria-describedby',existing.join(' '));else input.removeAttribute('aria-describedby');}errorVisible=!!first;errors.hidden=!first;errors.textContent=first?copy.validation:'';if(first)first.focus();return !first;}
-form.addEventListener('input',e=>{const el=e.target;if(el.hasAttribute('aria-invalid')&&el.value.trim()){el.removeAttribute('aria-invalid');document.getElementById('error-'+el.name).textContent='';}});
-form.addEventListener('submit',async e=>{e.preventDefault();if(sending)return;status.textContent='';if(!validate())return;if(form.elements._gotcha.value){errors.hidden=false;errors.textContent=copy.error;return;}
-if(!configured){
- const fields=['name','email','company','service','phone','message'];
- const body=fields.map((name,i)=>copy.email_labels[i]+': '+(name==='service'?form.elements.service.selectedOptions[0].textContent:form.elements[name].value.trim())).join('\n\n');
- const address=config.contactEmail||'markus@onyx45.com';
- const mailto='mailto:'+address+'?subject='+encodeURIComponent(copy.email_subject)+'&body='+encodeURIComponent(body);
- document.getElementById('email-open').href=mailto;document.getElementById('email-draft').value=body;document.getElementById('email-result').hidden=false;
- status.textContent=copy.email_draft;status.focus();return;
+function validate(){
+ let first=null;
+ for(const input of form.querySelectorAll('.form-grid input,.form-grid select,.form-grid textarea')){
+  const error=document.getElementById('error-'+input.name);let text='';
+  if(input.required&&!input.value.trim())text=copy.required;
+  else if(input.type==='email'&&input.validity.typeMismatch)text=copy.email_error;
+  else if(input.name==='service'&&!['1','2','3','4'].includes(input.value))text=copy.required;
+  else if(input.name==='message'&&input.value.trim().length<20)text=copy.length_error;
+  else if(!input.validity.valid)text=copy.validation;
+  error.textContent=text;input.removeAttribute('aria-invalid');
+  const described=(input.getAttribute('aria-describedby')||'').split(' ').filter(v=>v&&!v.startsWith('error-'));
+  if(text){first=first||input;input.setAttribute('aria-invalid','true');described.push(error.id);}
+  if(described.length)input.setAttribute('aria-describedby',described.join(' '));else input.removeAttribute('aria-describedby');
+ }
+ errors.hidden=!first;errors.textContent=first?copy.validation:'';if(first)first.focus();return !first;
 }
-sending=true;submit.disabled=true;submit.textContent=copy.sending;form.setAttribute('aria-busy','true');const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);try{const data=new FormData(form);data.set('access_key',config.formAccessKey);data.set('subject','ONYX45 | New Business Enquiry');data.set('from_name','ONYX45 Website');data.set('language',lang);data.set('service_label',form.elements.service.selectedOptions[0].textContent);const response=await fetch(endpoint,{method:'POST',body:data,headers:{Accept:'application/json'},signal:controller.signal});const result=await response.json().catch(()=>null);if(!response.ok||!result||result.success!==true)throw new Error('Submission not confirmed');status.textContent=copy.success;form.reset();status.focus();}catch{errors.hidden=false;errors.textContent=copy.error;errors.focus();}finally{clearTimeout(timeout);sending=false;submit.disabled=false;submit.textContent=copy.submit;form.removeAttribute('aria-busy');}});
+form.addEventListener('input',e=>{const input=e.target;if(input.getAttribute('aria-invalid')==='true'){input.removeAttribute('aria-invalid');const error=document.getElementById('error-'+input.name);if(error)error.textContent='';}});
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(sending)return;status.textContent='';errors.hidden=true;errors.textContent='';
+ if(!configured){errors.hidden=false;errors.textContent=copy.unconfigured;errors.focus();return;}
+ if(!validate())return;
+ if(form.elements._gotcha.value.trim()||form.elements.botcheck.checked){errors.hidden=false;errors.textContent=copy.error;errors.focus();return;}
+ sending=true;submit.disabled=true;submit.textContent=copy.sending;form.setAttribute('aria-busy','true');status.textContent=copy.sending;
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
+ try{
+  // Explicit allowlist: do not send honey fields, browser state or unrelated form controls.
+  const data={access_key:config.formAccessKey,subject:'ONYX45 | Business Enquiry | '+form.elements.service.selectedOptions[0].textContent,from_name:'ONYX45 Website',language:lang,service:form.elements.service.value,service_label:form.elements.service.selectedOptions[0].textContent,botcheck:false};
+  for(const field of ['name','email','company','message','phone'])data[field]=form.elements[field].value.trim();
+  const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data),signal:controller.signal,credentials:'omit',referrerPolicy:'no-referrer'});
+  const result=await response.json().catch(()=>null);
+  if(!response.ok||!result||result.success!==true)throw new Error('Submission not confirmed');
+  form.reset();status.textContent=copy.success;status.focus();
+ }catch{
+  status.textContent='';errors.hidden=false;errors.textContent=copy.error;errors.focus();
+ }finally{
+  clearTimeout(timeout);sending=false;submit.disabled=false;submit.textContent=copy.submit;form.removeAttribute('aria-busy');
+ }
+});
 })();

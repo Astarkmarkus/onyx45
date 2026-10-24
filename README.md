@@ -4,11 +4,17 @@ Premium static B2B agency website, with complete English and Swedish HTML pages.
 
 ## Contact enquiries
 
-The owner-supplied contact details are **markus@onyx45.com** and **+34 673 081 311**. They appear on the contact page; the email is also in every footer.
+The contact form posts directly from the browser to `https://api.web3forms.com/submit`, using the existing public access key in `assets/site-config.js`. English and Swedish enquiries include name, email, company, selected service ID and label, message, optional phone and language. No custom backend or paid feature is required by this implementation.
 
-With no external backend configured, the form validates the enquiry and prepares an email draft. The visitor opens the draft in their email app and sends it themselves. They can also copy the full enquiry or use the direct email/telephone links. Preparing a draft is never presented as a sent enquiry. No inbox delivery has been tested or claimed.
+The submit buttons are **Send Enquiry** and **Skicka förfrågan**. Success requires both a successful HTTP response and `success: true` in Web3Forms JSON. Errors and timeouts preserve the enquiry. Duplicate requests are blocked while sending. Both a local text honeypot and Web3Forms `botcheck` are used. There is no email-draft submission path. Direct email and telephone remain separate voluntary contact options.
 
-An optional Formspree backend remains supported. To activate direct submissions, create and verify a form in Formspree, place the public HTTPS endpoint in `assets/site-config.js`, configure provider spam settings and confirm real delivery to the intended inbox with an owner test. Provider errors keep entered information; success appears only after an affirmative provider response. Development tests use mocked provider responses only. Update the bilingual privacy notice to reflect actual processing before enabling a backend.
+Owner check: confirm the existing Web3Forms form routes to markus@onyx45.com, Advanced Spam Filter is enabled and Spam Protection Level is Basic. These dashboard settings and inbox delivery cannot be verified from a repository key. Submit one clearly identified owner test and check both Web3Forms submissions and Proton Mail. Automated development tests use mocked responses and send no messages.
+
+Official API reference: https://docs.web3forms.com/getting-started/api-reference
+
+### Cache-safe script changes
+
+Edit the canonical sources `assets/agency-20261023.js` and `assets/site-config.js`, then run `python3 scripts/version-assets.py`. The helper writes content-hashed script files and updates every rendered HTML page. Commit the sources, generated scripts, `assets/script-versions.json` and changed HTML together. Changing either source gives it a different filename, rather than requiring visitors to clear their caches. No production build is required. Keep prior generated scripts while cached pages may still reference them.
 
 ## Before production launch
 
@@ -53,9 +59,9 @@ Insights is hidden from primary navigation until genuine articles are available.
 
 ## Privacy and security
 
-No analytics, pixels, remote font requests or other third-party browser resources are loaded by this implementation. The current email-draft flow sends no enquiry contents from the website. If an owner-configured Formspree endpoint is enabled, submissions go there only after submission. No API secret is present. Form contents are not saved in browser storage. Necessary preference storage can be changed from the footer.
+No analytics, pixels, remote font requests or other third-party browser resources are loaded by this implementation. Web3Forms receives enquiry contents only when the visitor submits the form. No API secret is present. Form contents are not saved in browser storage. Necessary preference storage can be changed from the footer.
 
-The CSP limits resources to the site and submissions to Formspree. GitHub Pages HTTP security headers, TLS, DNS, registrar and Cloudflare account settings are outside this static repository. If Cloudflare automatically injects analytics or other code, inspect and configure that separately; this build does not silently change those account settings.
+The CSP limits resources to the site and permits contact requests only to the Web3Forms API. GitHub Pages HTTP security headers, TLS, DNS, registrar and Cloudflare account settings are outside this static repository. If Cloudflare automatically injects analytics or other code, inspect and configure that separately; this build does not silently change those account settings.
 
 ## Recovery
 

@@ -41,3 +41,8 @@
 - CNAME, robots.txt, sitemap.xml, GitHub Pages infrastructure and existing canonical/hreflang URLs are unchanged. No dependencies or third-party browser scripts were added.
 - No framework build, TypeScript or lint configuration exists. JavaScript syntax and the repository's static verifier passed.
 - Outstanding owner work: verify the mailbox receives a real test email; provide real operator/controller details and retention/processing facts for the legal templates. Direct in-page delivery requires an activated form backend and corresponding privacy copy update.
+
+
+## Web3Forms repair — 24 October 2026
+
+This supersedes the earlier email-draft and optional Formspree contact descriptions. See WEB3FORMS-FIX.md for baseline findings, direct submission behavior, response tests and unverified owner dashboard/inbox checks. The existing public Web3Forms key is reused. No real enquiry was sent during implementation.
