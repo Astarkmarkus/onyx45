@@ -74,3 +74,5 @@ A separate Git bundle of the original history is delivered. A normal revert can 
 Each inclusion row on both Services pages is an accessible button with `aria-expanded` and `aria-controls`. Native button behavior supports Enter/Space. Panels animate their height, support multiple open items and respect reduced motion. Campaign platforms are secondary content within Paid Advertising, rather than separate services. New platform cards can be added to `.platform-grid` without changing navigation.
 
 Validation: run `python3 scripts/verify-static.py`. This project has no framework build, type-check or lint commands.
+
+The 25 October 2026 update clarifies the introductory call and adds illustrative engagement scopes. A real Web3Forms test was accepted; see INTRO-CALL-UPDATE.md for its reference and the outstanding owner inbox/identity checks. The versioning helper now fingerprints CSS as well as scripts.

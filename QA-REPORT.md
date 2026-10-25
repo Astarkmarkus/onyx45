@@ -46,3 +46,8 @@
 ## Web3Forms repair — 24 October 2026
 
 This supersedes the earlier email-draft and optional Formspree contact descriptions. See WEB3FORMS-FIX.md for baseline findings, direct submission behavior, response tests and unverified owner dashboard/inbox checks. The existing public Web3Forms key is reused. No real enquiry was sent during implementation.
+
+
+## Introduction call update — 25 October 2026
+
+See INTRO-CALL-UPDATE.md. Earlier “no real submission” statements describe earlier development runs; one clearly marked real test was now submitted and accepted through the live form. Proton/dashboard receipt remains unverified. CTA, examples and telephone links updated in both languages; existing automated contact and static checks passed.

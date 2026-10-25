@@ -3,7 +3,8 @@
 ## Required before live lead collection
 
 - [x] Publish owner-supplied email and telephone, plus direct Web3Forms contact submission.
-- [ ] Owner: confirm markus@onyx45.com receives a real test email. No message was sent during development.
+- [x] One real owner-authorized delivery test submitted; live page confirmed API acceptance (25 October 2026, reference O45-DELIVERY-20261025-A).
+- [ ] Owner: confirm that reference appears in Web3Forms Submissions and reaches Proton Mail (including spam). API acceptance alone is not inbox proof.
 - [ ] Confirm Web3Forms recipient markus@onyx45.com, Advanced Spam Filter enabled and Basic Spam Protection Level. The existing key is reused; no new account or paid feature is introduced.
 - [ ] Confirm the legal name of the operator and data controller. No registered-entity claim has been invented.
 - [ ] Provide applicable company/tax registration, service address and a verified contact for privacy requests.

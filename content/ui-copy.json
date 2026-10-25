@@ -7,8 +7,8 @@
       "About",
       "Contact"
     ],
-    "book": "Book a Consultation",
-    "free": "Book a Free Consultation",
+    "book": "Free Intro Call",
+    "free": "Request a Free Intro Call",
     "explore": "Explore Our Services",
     "tag": "Growth. Managed.",
     "eyebrow": "B2B GROWTH & MARKETING",
@@ -153,8 +153,8 @@
     "empty_title": "Good ideas deserve\na considered perspective.",
     "empty_body": "Our editorial space is taking shape. When articles and company updates are published, you’ll find them here. In the meantime, explore how we approach the work.",
     "contact_title": "Let’s find your\nnext move.",
-    "contact_lead": "Tell us a little about your business, what you want to achieve and where you need support.",
-    "contact_note": "An initial conversation to explore fit and next steps. No obligation to proceed.",
+    "contact_lead": "A short, free introductory call to understand your business, discuss your needs and explore a suitable next step. No obligation to proceed.",
+    "contact_note": "Tell us what you need below. We’ll reply by email to arrange an introductory call at a mutually convenient time.",
     "form_labels": [
       "Full name",
       "Business email",
@@ -325,7 +325,12 @@
       "direct": "Prefer to get in touch directly?",
       "phone": "Call +34 673 081 311",
       "privacy": "For privacy questions or requests, contact markus@onyx45.com."
-    }
+    },
+    "engagement_examples": [
+      "An advertising pilot with a campaign plan, agreed launch scope, tracking guidance and a performance review.",
+      "A B2B prospecting project with a target profile, researched accounts, outreach messaging and organized follow-up.",
+      "A coordinated growth project with a shared roadmap, named responsibilities and connected campaign and sales reporting."
+    ]
   },
   "sv": {
     "nav": [
@@ -335,8 +340,8 @@
       "Om oss",
       "Kontakt"
     ],
-    "book": "Boka ett samtal",
-    "free": "Boka ett kostnadsfritt samtal",
+    "book": "Kostnadsfritt samtal",
+    "free": "Be om ett kostnadsfritt introduktionssamtal",
     "explore": "Utforska våra tjänster",
     "tag": "Tillväxt. Med struktur.",
     "eyebrow": "B2B-TILLVÄXT & MARKNADSFÖRING",
@@ -481,8 +486,8 @@
     "empty_title": "Bra idéer förtjänar\nett genomtänkt perspektiv.",
     "empty_body": "Här tar vår redaktionella plats form. När artiklar och företagsnyheter publiceras hittar du dem här. Under tiden kan du läsa om hur vi arbetar.",
     "contact_title": "Hitta ert\nnästa steg.",
-    "contact_lead": "Berätta kort om ert företag, vad ni vill uppnå och vilket stöd ni söker.",
-    "contact_note": "Ett första samtal om behov och möjliga nästa steg. Utan förpliktelse att gå vidare.",
+    "contact_lead": "Ett kort, kostnadsfritt introduktionssamtal där vi lär känna ert företag, diskuterar era behov och utforskar ett lämpligt nästa steg. Utan förpliktelse att gå vidare.",
+    "contact_note": "Berätta vad ni behöver i formuläret. Vi återkommer via mejl för att hitta en tid för introduktionssamtalet som passar båda parter.",
     "form_labels": [
       "Fullständigt namn",
       "E-post på jobbet",
@@ -653,6 +658,11 @@
       "direct": "Vill ni kontakta oss direkt?",
       "phone": "Ring +34 673 081 311",
       "privacy": "För integritetsfrågor eller förfrågningar om personuppgifter, kontakta markus@onyx45.com."
-    }
+    },
+    "engagement_examples": [
+      "En annonseringspilot med kampanjplan, avtalad lanseringsomfattning, vägledning om mätning och resultatuppföljning.",
+      "Ett B2B-prospekteringsprojekt med kundprofil, undersökta målföretag, kontaktbudskap och strukturerad uppföljning.",
+      "Ett samordnat tillväxtprojekt med gemensam plan, tydligt ansvar och sammanhängande uppföljning av kampanjer och försäljning."
+    ]
   }
 }

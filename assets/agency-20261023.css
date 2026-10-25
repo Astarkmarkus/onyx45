@@ -25,3 +25,6 @@
 @media(max-width:760px){.service-detail{padding-block:52px}.advertising-details{gap:30px;padding-top:0}.service-detail-title>p{font-size:14px}.feature-toggle{font-size:14px;gap:14px}.platform-grid,.advertising-process ol{gap:24px 18px}.platform-grid p,.advertising-process p{font-size:13px}}
 @media(max-width:370px){.platform-grid{grid-template-columns:1fr}.advertising-process ol{gap:24px 14px}.advertising-process h4{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.feature-panel,.feature-icon:after,.feature-icon:before{transition:none}}
+
+/* Concrete engagement examples within existing service surfaces. */
+.service-card .service-example,.outcome .service-example{border-top:1px solid var(--line);padding-top:16px;margin-top:16px;font-size:13px;line-height:1.7}.service-example strong{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:7px}.service-example span{display:block;color:var(--muted)}.comparison-section>.fine{margin-top:20px}
