@@ -166,13 +166,13 @@
     "submit": "Send Enquiry",
     "sending": "Sending your enquiry…",
     "success": "Thank you! Your enquiry has been sent successfully. ONYX45 will get back to you as soon as possible.",
-    "error": "We couldn't send your enquiry. Please try again, or contact us directly at markus@onyx45.com.",
+    "error": "We couldn't send your enquiry. Please try again, or contact us directly at Contact@onyx45.com.",
     "validation": "Please check the highlighted fields.",
     "required": "Please complete this field.",
     "email_error": "Enter a valid email address.",
     "length_error": "Please add a little more detail (at least 20 characters).",
     "form_privacy": "We use your details to respond to this enquiry. Read our Privacy Policy.",
-    "unconfigured": "The form is temporarily unavailable. You can contact us directly at markus@onyx45.com.",
+    "unconfigured": "The form is temporarily unavailable. You can contact us directly at Contact@onyx45.com.",
     "cookie_title": "Your privacy,\nyour choice.",
     "cookie_body": "This website uses no advertising or analytics trackers. We store your privacy choice and, if permitted, your language preference. Contact details are sent to Web3Forms only when you submit the enquiry form.",
     "cookie_accept": "Use necessary preferences",
@@ -316,7 +316,7 @@
       ],
       "direct": "Prefer to get in touch directly?",
       "phone": "Call +34 673 081 311",
-      "privacy": "For privacy questions or requests, contact markus@onyx45.com."
+      "privacy": "For privacy questions or requests, contact Contact@onyx45.com."
     },
     "engagement_examples": [
       "An advertising pilot with a campaign plan, agreed launch scope, tracking guidance and a performance review.",
@@ -528,13 +528,13 @@
     "submit": "Skicka förfrågan",
     "sending": "Skickar din förfrågan…",
     "success": "Tack! Din förfrågan har skickats. ONYX45 återkommer så snart som möjligt.",
-    "error": "Det gick inte att skicka din förfrågan. Försök igen eller kontakta oss direkt på markus@onyx45.com.",
+    "error": "Det gick inte att skicka din förfrågan. Försök igen eller kontakta oss direkt på Contact@onyx45.com.",
     "validation": "Kontrollera de markerade fälten.",
     "required": "Fyll i det här fältet.",
     "email_error": "Ange en giltig e-postadress.",
     "length_error": "Beskriv gärna lite mer (minst 20 tecken).",
     "form_privacy": "Vi använder uppgifterna för att besvara förfrågan. Läs vår integritetspolicy.",
-    "unconfigured": "Formuläret är tillfälligt otillgängligt. Du kan kontakta oss direkt på markus@onyx45.com.",
+    "unconfigured": "Formuläret är tillfälligt otillgängligt. Du kan kontakta oss direkt på Contact@onyx45.com.",
     "cookie_title": "Din integritet.\nDitt val.",
     "cookie_body": "Webbplatsen använder inga annons- eller analysspårare. Vi sparar ditt integritetsval och, om du tillåter det, ditt språkval. Kontaktuppgifter skickas till Web3Forms först när du skickar formuläret.",
     "cookie_accept": "Använd nödvändiga inställningar",
@@ -678,7 +678,7 @@
       ],
       "direct": "Vill ni kontakta oss direkt?",
       "phone": "Ring +34 673 081 311",
-      "privacy": "För integritetsfrågor eller förfrågningar om personuppgifter, kontakta markus@onyx45.com."
+      "privacy": "För integritetsfrågor eller förfrågningar om personuppgifter, kontakta Contact@onyx45.com."
     },
     "engagement_examples": [
       "En annonseringspilot med kampanjplan, avtalad lanseringsomfattning, vägledning om mätning och resultatuppföljning.",

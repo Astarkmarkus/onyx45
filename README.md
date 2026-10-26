@@ -8,7 +8,7 @@ The contact form posts directly from the browser to `https://api.web3forms.com/s
 
 The submit buttons are **Send Enquiry** and **Skicka förfrågan**. Success requires both a successful HTTP response and `success: true` in Web3Forms JSON. Errors and timeouts preserve the enquiry. Duplicate requests are blocked while sending. Both a local text honeypot and Web3Forms `botcheck` are used. There is no email-draft submission path. Direct email and telephone remain separate voluntary contact options.
 
-Owner check: confirm the existing Web3Forms form routes to markus@onyx45.com, Advanced Spam Filter is enabled and Spam Protection Level is Basic. These dashboard settings and inbox delivery cannot be verified from a repository key. Submit one clearly identified owner test and check both Web3Forms submissions and Proton Mail. Automated development tests use mocked responses and send no messages.
+Owner check: confirm the existing Web3Forms form routes to Contact@onyx45.com, Advanced Spam Filter is enabled and Spam Protection Level is Basic. These dashboard settings and inbox delivery cannot be verified from a repository key. Submit one clearly identified owner test and check both Web3Forms submissions and Proton Mail. Automated development tests use mocked responses and send no messages.
 
 Official API reference: https://docs.web3forms.com/getting-started/api-reference
 
@@ -76,3 +76,5 @@ Each inclusion row on both Services pages is an accessible button with `aria-exp
 Validation: run `python3 scripts/verify-static.py`. This project has no framework build, type-check or lint commands.
 
 The 25 October 2026 update clarifies the introductory call and adds illustrative engagement scopes. A real Web3Forms test was accepted; see INTRO-CALL-UPDATE.md for its reference and the outstanding owner inbox/identity checks. The versioning helper now fingerprints CSS as well as scripts.
+
+Contact-address update (26 October 2026): website contact links and notices now use Contact@onyx45.com. The existing Web3Forms access key has been preserved; its provider-side recipient has not been changed or verified. Earlier delivery-test acceptance must not be treated as evidence of delivery to this new mailbox. Confirm/update the existing form recipient in Web3Forms before relying on that routing.
