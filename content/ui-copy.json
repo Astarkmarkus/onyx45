@@ -132,14 +132,6 @@
       "Discuss fees, trade-offs and platform arrangements openly.",
       "Use evidence to keep improving the approach."
     ],
-    "about_title": "Growth needs more\nthan ideas.",
-    "about_emphasis": "It needs execution.",
-    "about_lead": "ONYX45 is built around a simple ambition: make professional growth support more accessible, connected and practical.",
-    "about_body": "Companies need to reach new audiences, open business conversations and keep important projects moving. Too often, these activities sit with disconnected providers or compete for the same limited time.",
-    "about_body2": "We bring advertising, lead generation and growth coordination into one conversation. The aim is to make the work easier to manage, with a focused plan and a clear view of what happens next.",
-    "about_quote": "A strong idea matters.\nWhat happens next matters more.",
-    "about_fit": "Built for companies\nready to move.",
-    "about_fit_body": "Whether you need support with a specific campaign or coordination across several initiatives, the starting point is the same: understand your business and agree a useful scope.",
     "insights_title": "A clearer view\nof growth.",
     "insights_lead": "Perspectives on paid advertising, B2B conversations and the practical work of moving a business forward.",
     "categories": [
@@ -330,7 +322,44 @@
       "An advertising pilot with a campaign plan, agreed launch scope, tracking guidance and a performance review.",
       "A B2B prospecting project with a target profile, researched accounts, outreach messaging and organized follow-up.",
       "A coordinated growth project with a shared roadmap, named responsibilities and connected campaign and sales reporting."
-    ]
+    ],
+    "about_title": "Built with purpose. Driven by growth.",
+    "about_story": {
+      "path": "about/index.html",
+      "title": "Built with purpose. Driven by growth.",
+      "storyTitle": "A personal story behind ONYX45",
+      "founder": [
+        "My name is Markus, and I’m the founder of ONYX45.",
+        "The idea behind ONYX45 grew from something I discovered about myself: I genuinely enjoy bringing people, ideas and projects together — and finding better ways for businesses to connect with the customers they want to reach.",
+        "Through my experience in sales, customer relationships and project coordination, I became increasingly interested in what makes a business stand out. Not just the advertising people see, but the strategy, communication and work happening behind it.",
+        "I wanted to build something that brought those pieces together.",
+        "That’s how ONYX45 began: with the ambition to create a growth partner that helps businesses move forward through paid advertising, B2B lead generation and hands-on project management."
+      ],
+      "meaningTitle": "The meaning behind ONYX45",
+      "meaningIntro": "The name ONYX45 carries a meaning that goes beyond business.",
+      "onyx": [
+        "ONYX comes from the gemstone, which I associate with strength, resilience and timelessness."
+      ],
+      "sisu": [
+        "Those qualities also remind me of a Finnish concept called Sisu — a word that is difficult to translate directly into English. It represents inner strength, determination and the courage to keep moving forward, even when things become challenging.",
+        "To me, Sisu is not about never facing difficulties. It’s about having the determination to work through them, staying true to your values and taking pride in what you build.",
+        "It’s a philosophy I want to carry into ONYX45 — through the way we approach challenges, take responsibility and build lasting relationships with our clients."
+      ],
+      "fortyfive": [
+        "45 holds an even more personal meaning.",
+        "It’s a tribute to my grandfather, who was born in 1945 and meant more to me than words could ever fully express.",
+        "By including his birth year in the name, I carry a part of his memory into something I’m building for the future.",
+        "Together, ONYX45 represents both the determination to keep moving forward and the importance of remembering where we come from."
+      ],
+      "visionTitle": "What we’re building",
+      "vision": [
+        "My vision for ONYX45 is to create an agency that businesses can rely on — not just to launch campaigns, but to coordinate the work, people and decisions that support meaningful growth.",
+        "We believe in clear communication, thoughtful execution and taking responsibility for the work we deliver.",
+        "We’re building ONYX45 step by step, with a practical approach, trusted collaborators and a focus on long-term relationships."
+      ]
+    },
+    "about_supporting_statement": "Built with purpose. Driven by Sisu.",
+    "about_brand_tagline": "ONYX45 — Growth. Managed."
   },
   "sv": {
     "nav": [
@@ -465,14 +494,6 @@
       "Prata öppet om arvoden, avvägningar och plattformsupplägg.",
       "Använd underlaget för att förbättra arbetssättet."
     ],
-    "about_title": "Tillväxt behöver mer\nän idéer.",
-    "about_emphasis": "Den behöver genomförande.",
-    "about_lead": "ONYX45 bygger på en enkel ambition: att göra professionellt tillväxtstöd mer tillgängligt, sammanhängande och praktiskt.",
-    "about_body": "Företag behöver nå nya målgrupper, skapa affärssamtal och driva viktiga projekt framåt. Ofta fördelas arbetet mellan leverantörer som inte samverkar, eller konkurrerar om samma begränsade tid.",
-    "about_body2": "Vi samlar annonsering, leadgenerering och tillväxtledning i ett och samma samtal. Målet är att göra arbetet lättare att styra, med en fokuserad plan och tydlighet kring nästa steg.",
-    "about_quote": "En stark idé spelar roll.\nDet som händer sedan spelar ännu större roll.",
-    "about_fit": "För företag som\nvill framåt.",
-    "about_fit_body": "Oavsett om ni behöver hjälp med en specifik kampanj eller samordning av flera initiativ börjar vi på samma sätt: med att förstå verksamheten och enas om ett meningsfullt uppdrag.",
     "insights_title": "Ett tydligare perspektiv\npå tillväxt.",
     "insights_lead": "Tankar om digital annonsering, B2B-samtal och det praktiska arbetet med att utveckla ett företag.",
     "categories": [
@@ -663,6 +684,43 @@
       "En annonseringspilot med kampanjplan, avtalad lanseringsomfattning, vägledning om mätning och resultatuppföljning.",
       "Ett B2B-prospekteringsprojekt med kundprofil, undersökta målföretag, kontaktbudskap och strukturerad uppföljning.",
       "Ett samordnat tillväxtprojekt med gemensam plan, tydligt ansvar och sammanhängande uppföljning av kampanjer och försäljning."
-    ]
+    ],
+    "about_title": "Byggt med mening. Drivet av tillväxt.",
+    "about_story": {
+      "path": "sv/om-oss/index.html",
+      "title": "Byggt med mening. Drivet av tillväxt.",
+      "storyTitle": "Historien bakom ONYX45",
+      "founder": [
+        "Mitt namn är Markus och jag är grundaren av ONYX45.",
+        "Idén bakom företaget växte fram när jag upptäckte hur mycket jag tycker om att föra samman människor, idéer och projekt – och framför allt att förstå hur företag kan nå ut, presentera sig och skapa starkare relationer med sina kunder.",
+        "Genom mina erfarenheter inom försäljning, kundrelationer och projektledning blev jag alltmer intresserad av vad som faktiskt får ett företag att sticka ut. Inte bara annonserna kunderna ser, utan även strategin, kommunikationen och arbetet bakom.",
+        "Jag ville skapa något som samlar de delarna.",
+        "Det var så ONYX45 föddes – ur ambitionen att bygga en tillväxtpartner som hjälper företag att utvecklas genom digital annonsering, B2B-leadgenerering och praktisk projektledning."
+      ],
+      "meaningTitle": "Betydelsen bakom ONYX45",
+      "meaningIntro": "Namnet ONYX45 betyder mer för mig än bara ett företagsnamn.",
+      "onyx": [
+        "ONYX kommer från ädelstenen onyx, som jag förknippar med styrka, uthållighet och tidlöshet."
+      ],
+      "sisu": [
+        "Dessa egenskaper påminner mig också om det finska begreppet Sisu – ett ord som inte riktigt går att översätta med ett enda ord. Det handlar om inre styrka, beslutsamhet och modet att fortsätta framåt även när man möter motgångar.",
+        "För mig handlar Sisu inte om att aldrig möta svårigheter, utan om viljan att ta sig igenom dem, stå fast vid sina värderingar och känna stolthet över det man bygger.",
+        "Det är en filosofi jag vill ska genomsyra ONYX45 – hur vi möter utmaningar, tar ansvar och bygger långsiktiga kundrelationer."
+      ],
+      "fortyfive": [
+        "45 har en ännu mer personlig betydelse.",
+        "Det är en hyllning till min morfar, som föddes 1945 och betydde mer för mig än ord kan beskriva.",
+        "Genom att bära med hans födelseår i företagsnamnet låter jag en del av hans minne följa med i något jag bygger för framtiden.",
+        "Tillsammans representerar ONYX45 både beslutsamheten att fortsätta framåt och vikten av att aldrig glömma var man kommer ifrån."
+      ],
+      "visionTitle": "Det vi bygger",
+      "vision": [
+        "Min vision är att ONYX45 ska vara en partner företag verkligen kan förlita sig på – inte bara för att genomföra kampanjer, utan också för att samordna människorna, arbetet och besluten som bidrar till långsiktig tillväxt.",
+        "Vi tror på tydlig kommunikation, genomtänkt genomförande och att ta ansvar för det vi levererar.",
+        "Vi bygger ONYX45 steg för steg, med ett praktiskt arbetssätt, rätt samarbetspartners och fokus på långsiktiga kundrelationer."
+      ]
+    },
+    "about_supporting_statement": "Built with purpose. Driven by Sisu.",
+    "about_brand_tagline": "ONYX45 — Growth. Managed."
   }
 }
