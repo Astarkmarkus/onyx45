@@ -28,3 +28,11 @@
 
 /* Concrete engagement examples within existing service surfaces. */
 .service-card .service-example,.outcome .service-example{border-top:1px solid var(--line);padding-top:16px;margin-top:16px;font-size:13px;line-height:1.7}.service-example strong{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:7px}.service-example span{display:block;color:var(--muted)}.comparison-section>.fine{margin-top:20px}
+
+/* Refinement: connected hero, readable international copy and a focused pilot. */
+h1{letter-spacing:-.035em}.hero h1{letter-spacing:-.045em}.hero-actions{flex-wrap:wrap}.button{max-width:100%;white-space:normal}.hero-art{isolation:isolate}.hero-network{position:absolute;inset:0;width:100%;height:100%;color:var(--accent);opacity:.32;z-index:0;pointer-events:none}.hero-art .art-panel{box-shadow:0 20px 48px #0005,inset 0 1px #f5f7fa0a}.hero-art .panel-two{border-color:#658347;box-shadow:0 25px 65px #0006,0 0 36px #b1ff690a}.pilot-section{border-top:1px solid var(--line)}.pilot-section>.lead{max-width:790px;margin-bottom:40px}.pilot-section .process{margin-bottom:32px}.pilot-section>.fine{max-width:750px;margin-bottom:26px}.international-contact{font-size:14px!important;color:var(--muted);line-height:1.8}.footer-bottom nav a[href^="tel:"]{font-variant-numeric:tabular-nums}.values-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.values-grid>article{grid-column:span 2}.values-grid>article:nth-last-child(-n+2){grid-column:span 3}.language-selector>div{min-width:165px}.hero .lead{max-width:600px}
+@media(max-width:1050px){.header-actions>.button{max-width:220px;text-align:center}.values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.values-grid>article,.values-grid>article:nth-last-child(-n+2){grid-column:auto}.values-grid>article:last-child{grid-column:1/-1;max-width:540px}}
+@media(max-width:760px){.hero-actions .button{flex:1 1 240px;min-width:0;max-width:100%}.hero h1{letter-spacing:-.04em}.pilot-section .process{margin-top:30px}.international-contact{font-size:14px!important}.hero-network{opacity:.23}}
+
+[lang=es] .flagship-card:before{content:'GESTIÓN INTEGRAL'}[lang=ca] .flagship-card:before{content:'GESTIÓ INTEGRAL'}
+@media(max-width:520px){.values-grid{grid-template-columns:1fr}.values-grid>article:last-child{grid-column:auto;max-width:none}}

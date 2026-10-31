@@ -2,6 +2,28 @@
   "approved": false,
   "slug": "",
   "published": "",
-  "en": {"title":"","description":"","category":"","paragraphs":[]},
-  "sv": {"title":"","description":"","category":"","paragraphs":[]}
+  "en": {
+    "title": "",
+    "description": "",
+    "category": "",
+    "paragraphs": []
+  },
+  "sv": {
+    "title": "",
+    "description": "",
+    "category": "",
+    "paragraphs": []
+  },
+  "es": {
+    "title": "",
+    "description": "",
+    "category": "",
+    "paragraphs": []
+  },
+  "ca": {
+    "title": "",
+    "description": "",
+    "category": "",
+    "paragraphs": []
+  }
 }

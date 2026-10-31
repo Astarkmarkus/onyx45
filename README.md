@@ -1,10 +1,10 @@
 # ONYX45 — Growth. Managed.
 
-Premium static B2B agency website, with complete English and Swedish HTML pages. No framework, package install or production build is required. Hosting remains GitHub Pages at https://onyx45.com/.
+Premium static B2B agency website, with complete English, Swedish, Spanish and Catalan HTML pages. No framework, package install or production build is required. Hosting remains GitHub Pages at https://onyx45.com/.
 
 ## Contact enquiries
 
-The contact form posts directly from the browser to `https://api.web3forms.com/submit`, using the existing public access key in `assets/site-config.js`. English and Swedish enquiries include name, email, company, selected service ID and label, message, optional phone and language. No custom backend or paid feature is required by this implementation.
+The contact form posts directly from the browser to `https://api.web3forms.com/submit`, using the existing public access key in `assets/site-config.js`. Enquiries in all four languages include name, email, company, selected service ID and label, message, optional phone and language. No custom backend or paid feature is required by this implementation.
 
 The submit buttons are **Send Enquiry** and **Skicka förfrågan**. Success requires both a successful HTTP response and `success: true` in Web3Forms JSON. Errors and timeouts preserve the enquiry. Duplicate requests are blocked while sending. Both a local text honeypot and Web3Forms `botcheck` are used. There is no email-draft submission path. Direct email and telephone remain separate voluntary contact options.
 
@@ -18,9 +18,9 @@ Edit the canonical sources `assets/agency-20261023.js` and `assets/site-config.j
 
 ## Before production launch
 
-Read `LAUNCH-CHECKLIST.md`. Supply the real legal operator/controller name, applicable registration details, service address, verified privacy contact, actual retention schedule, vendor/transfer arrangements and any required legal disclosures. Update both language versions. The legal pages are templates, not a completed compliance review. Empty operator fields in the configuration are internal reminders and are never inserted as public placeholder text.
+Read `LAUNCH-CHECKLIST.md`. Supply the real legal operator/controller name, applicable registration details, service address, verified privacy contact, actual retention schedule, vendor/transfer arrangements and any required legal disclosures. Update all four language versions. The legal pages are templates, not a completed compliance review. Empty operator fields in the configuration are internal reminders and are never inserted as public placeholder text.
 
-The owner supplied the contact email and phone. No founder name, team size, credentials, office, client results or testimonial is invented. The About page reserves a future founder profile through documented placement, without a public empty component.
+The owner supplied the contact email and phone. The About page uses Markus’s approved founder introduction and personal ONYX/Sisu/1945 story. No team size, credentials, office, client results or testimonial is invented.
 
 ## Upload without coding
 
@@ -43,19 +43,22 @@ GitHub's official guide: https://docs.github.com/en/repositories/working-with-fi
 English: `/`, `/services/`, `/approach/`, `/about/`, `/insights/`, `/contact/`.
 Swedish: `/sv/`, `/sv/tjanster/`, `/sv/arbetssatt/`, `/sv/om-oss/`, `/sv/insikter/`, `/sv/kontakt/`.
 
-Privacy, cookies and website terms have matching language versions. The selector opens the matching localized page, and all navigation stays in the selected language. When the visitor chooses necessary preferences, that language is remembered; a later direct visit to the default homepage can follow the saved Swedish preference. Choosing not to save language keeps the explicit language URLs working without storing a language preference.
+Spanish: `/es/`, `/es/servicios/`, `/es/enfoque/`, `/es/nosotros/`, `/es/ideas/`, `/es/contacto/`.
+Catalan: `/ca/`, `/ca/serveis/`, `/ca/com-treballem/`, `/ca/sobre-nosaltres/`, `/ca/idees/`, `/ca/contacte/`.
+
+Privacy, cookies and website terms have matching versions in all four languages. The selector opens the matching localized page, and all navigation stays in the selected language. When the visitor chooses necessary preferences, that language is remembered; a later direct visit to the default homepage can follow the saved Swedish, Spanish or Catalan preference. Choosing not to save language keeps the explicit language URLs working without storing a language preference.
 
 ## Maintain content
 
 Edit the rendered HTML directly or ask the maintainer for changes. `content/ui-copy.json` and `content/routes.json` provide a copy inventory and route reference; editing them alone does not rebuild HTML. There is intentionally no hidden production build process.
 
-The three services are Paid Advertising, Lead Generation & Appointment Setting, and flagship End-to-End Growth Management. Advertising spend is separate from management fees; scopes and commitments belong in the client agreement.
+The three services are Paid Advertising, Lead Generation & Appointment Setting, and flagship Growth & Project Management. Advertising spend is separate from management fees; scopes and commitments belong in the client agreement.
 
-Insights is hidden from primary navigation until genuine articles are available. Its existing URLs remain valid. No articles are published yet. `templates/article-input.example.json` and `scripts/new-article.py` provide a reusable bilingual article flow. Supply real approved content, titles, author only when verified, and the actual publication date. Run the helper only when ready to publish; it adds localized article files, insights cards and sitemap entries. Do not publish the example as an article.
+Insights is hidden from primary navigation until genuine articles are available. Its existing URLs remain valid. No articles are published yet. `templates/article-input.example.json` and `scripts/new-article.py` provide a reusable four-language article flow. Supply real approved content, titles, author only when verified, and the actual publication date. Run the helper only when ready to publish; it adds localized article files, insights cards and sitemap entries. Do not publish the example as an article.
 
 ## Brand assets
 
-`assets/brand/` contains vector wordmarks (outlined lettering), symbols, transparent PNGs, favicon SVG/PNG/ICO, Apple Touch Icon and English/Swedish sharing images. “Dark” is for dark backgrounds; “light” is for light backgrounds. Details and concept-generation prompt are in `assets/brand/brand-notes.md`.
+`assets/brand/` contains vector wordmarks (outlined lettering), symbols, transparent PNGs, favicon SVG/PNG/ICO, Apple Touch Icon and localized sharing images. “Dark” is for dark backgrounds; “light” is for light backgrounds. Details and concept-generation prompt are in `assets/brand/brand-notes.md`.
 
 ## Privacy and security
 

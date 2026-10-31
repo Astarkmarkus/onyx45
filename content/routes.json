@@ -1,38 +1,56 @@
 {
   "home": {
     "en": "/",
-    "sv": "/sv/"
+    "sv": "/sv/",
+    "es": "/es/",
+    "ca": "/ca/"
   },
   "services": {
     "en": "/services/",
-    "sv": "/sv/tjanster/"
+    "sv": "/sv/tjanster/",
+    "es": "/es/servicios/",
+    "ca": "/ca/serveis/"
   },
   "approach": {
     "en": "/approach/",
-    "sv": "/sv/arbetssatt/"
+    "sv": "/sv/arbetssatt/",
+    "es": "/es/enfoque/",
+    "ca": "/ca/com-treballem/"
   },
   "about": {
     "en": "/about/",
-    "sv": "/sv/om-oss/"
+    "sv": "/sv/om-oss/",
+    "es": "/es/nosotros/",
+    "ca": "/ca/sobre-nosaltres/"
   },
   "insights": {
     "en": "/insights/",
-    "sv": "/sv/insikter/"
+    "sv": "/sv/insikter/",
+    "es": "/es/ideas/",
+    "ca": "/ca/idees/"
   },
   "contact": {
     "en": "/contact/",
-    "sv": "/sv/kontakt/"
+    "sv": "/sv/kontakt/",
+    "es": "/es/contacto/",
+    "ca": "/ca/contacte/"
   },
   "privacy": {
     "en": "/privacy/",
-    "sv": "/sv/integritet/"
+    "sv": "/sv/integritet/",
+    "es": "/es/privacidad/",
+    "ca": "/ca/privacitat/"
   },
   "cookies": {
     "en": "/cookies/",
-    "sv": "/sv/cookies/"
+    "sv": "/sv/cookies/",
+    "es": "/es/cookies/",
+    "ca": "/ca/galetes/"
   },
   "terms": {
     "en": "/terms/",
-    "sv": "/sv/villkor/"
+    "sv": "/sv/villkor/",
+    "es": "/es/condiciones/",
+    "ca": "/ca/condicions/"
   }
 }
