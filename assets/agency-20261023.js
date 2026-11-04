@@ -69,3 +69,56 @@ form.addEventListener('submit',async e=>{
  }
 });
 })();
+
+// The decorative stone follows the document, with no pinned scroll or hidden copy.
+(()=>{
+ const story=document.querySelector('[data-onyx-story]');
+ if(!story||!window.requestAnimationFrame||!window.matchMedia||navigator.connection?.saveData)return;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)'),compact=matchMedia('(max-width:760px)');
+ const desktop=story.querySelector('.stone-field .onyx-image'),mobile=story.querySelector('.onyx-mobile .onyx-image');
+ const chapters=[...story.querySelectorAll('[data-onyx-chapter]')];
+ const poses=[[0,0,0,1,1],[-16,-10,10,.97,1],[25,10,-14,.94,1],[-27,20,12,.91,1],[-39,36,-16,.76,.25]];
+ let frame=0,near=true,enabled=false;
+ const limit=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
+ function clear(){
+  for(const el of [desktop,mobile,...chapters]){el.style.removeProperty('transform');el.style.removeProperty('opacity');}
+ }
+ function paint(){
+  frame=0;
+  if(!enabled||!near)return;
+  const box=story.getBoundingClientRect(),height=innerHeight;
+  if(box.bottom<0||box.top>height)return;
+  if(compact.matches){
+   const t=limit(-box.top/Math.max(1,chapters[0].offsetHeight));
+   mobile.style.transform='rotate('+(-6*t).toFixed(2)+'deg) translateY('+(12*t).toFixed(2)+'px)';
+   return;
+  }
+  const bounds=chapters.map(el=>el.getBoundingClientRect());
+  const centers=bounds.map(r=>r.top+r.height*.42);
+  const focal=height*.47;
+  let i=0;
+  while(i<centers.length-2&&focal>centers[i+1])i++;
+  let t=limit((focal-centers[i])/Math.max(1,centers[i+1]-centers[i]));
+  t=t*t*(3-2*t);
+  const [yaw,y,roll,scale,opacity]=poses[i].map((v,k)=>v+(poses[i+1][k]-v)*t);
+  desktop.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) rotateY('+yaw.toFixed(2)+'deg) rotateZ('+roll.toFixed(2)+'deg) scale('+scale.toFixed(3)+')';
+  desktop.style.opacity=opacity.toFixed(3);
+  for(let j=1;j<chapters.length-1;j++){
+   const el=chapters[j],enter=limit((height-bounds[j].top)/(height*.26));
+   el.style.transform='translateY('+((1-enter)*12).toFixed(1)+'px)';
+   el.style.opacity=(.87+.13*enter).toFixed(3);
+  }
+ }
+ function queue(){if(enabled&&near&&!frame)frame=requestAnimationFrame(paint);}
+ function mode(){
+  clear();enabled=!reduced.matches;queue();
+ }
+ window.addEventListener('scroll',queue,{passive:true});
+ window.addEventListener('resize',queue,{passive:true});
+ if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{near=entry.isIntersecting;queue();}).observe(story);
+ for(const media of [reduced,compact]){
+  if(media.addEventListener)media.addEventListener('change',mode);
+  else if(media.addListener)media.addListener(mode);
+ }
+ mode();
+})();

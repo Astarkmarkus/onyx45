@@ -36,3 +36,117 @@ h1{letter-spacing:-.035em}.hero h1{letter-spacing:-.045em}.hero-actions{flex-wra
 
 [lang=es] .flagship-card:before{content:'GESTIÓN INTEGRAL'}[lang=ca] .flagship-card:before{content:'GESTIÓ INTEGRAL'}
 @media(max-width:520px){.values-grid{grid-template-columns:1fr}.values-grid>article:last-child{grid-column:auto;max-width:none}}
+
+/* ONYX45 consultancy facelift: keep the established palette, remove ornamental UI. */
+:root{--radius:2px;--header-height:76px;--section-line:#35404d}
+html{scroll-padding-top:calc(var(--header-height) + 24px)}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.06;font-weight:560;text-wrap:balance;overflow-wrap:anywhere}
+h1{letter-spacing:-.058em}
+h2{letter-spacing:-.048em}
+.eyebrow,.consult-index,.stone-caption{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:.11em;font-weight:600}
+.eyebrow i{box-shadow:none}
+.site-header{position:sticky;top:0;background:#11151bf5}
+.header-inner{min-height:var(--header-height)}
+.header-actions>.button{border-radius:2px}
+.button{border-radius:2px}
+.button:hover{transform:none}
+.language-selector>div{border-radius:2px}
+.section{padding-block:clamp(68px,8vw,118px)}
+.page-intro{padding-block:clamp(64px,9vw,125px) clamp(40px,6vw,80px)}
+.page-intro h1{max-width:17ch}
+.onyx-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(36px,6vw,100px);position:relative}
+.onyx-narrative{grid-area:1/1;min-width:0}
+.onyx-rail{grid-area:1/2;min-width:0;position:relative}
+.onyx-stage{position:sticky;top:calc(var(--header-height) + 28px);height:min(76svh,680px);min-height:400px;display:grid;grid-template-rows:minmax(0,1fr) auto;padding:0 0 20px}
+.stone-field{display:grid;place-items:center;position:relative;isolation:isolate;perspective:980px}
+.stone-field::before{content:"";position:absolute;inset:9% -2%;z-index:-1;background:radial-gradient(ellipse,#31394770 0%,#222a352e 48%,transparent 72%)}
+.stone-field::after{content:"";position:absolute;z-index:-1;bottom:12%;width:61%;height:8%;border-radius:50%;background:#030405c9;filter:blur(18px)}
+.onyx-image{width:min(100%,570px);max-height:100%;object-fit:contain;display:block;position:relative}
+.stone-caption{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;color:var(--muted);font-size:10px}
+.consult-hero{padding-block:clamp(68px,10vw,145px) 64px;min-height:min(650px,calc(90svh - var(--header-height)));display:flex;flex-direction:column;justify-content:center}
+.consult-hero h1{font-size:clamp(45px,4.8vw,76px);max-width:none;text-wrap:initial;margin-bottom:26px}
+.consult-hero h1 span{display:block}
+.consult-hero .lead{max-width:49ch;font-size:clamp(16px,1.4vw,19px)}
+.consult-hero .hero-actions{display:flex;gap:12px;margin-top:10px;align-items:stretch}
+.onyx-mobile{display:none}
+.consult-capabilities{border-top:1px solid var(--line);padding-top:28px}
+.consult-capabilities>h2{font-size:11px;line-height:1.5;margin-bottom:0;color:var(--accent)}
+.consult-capability{min-height:300px;padding-block:54px 43px;border-bottom:1px solid var(--line)}
+.consult-capability .eyebrow{margin-bottom:15px}
+.consult-capability h3{font-size:clamp(30px,4vw,52px);text-wrap:initial;margin-bottom:16px}
+.consult-capability p{color:var(--muted);max-width:47ch;margin-bottom:12px}
+.consult-capability .text-link{border-bottom:1px solid var(--line)}
+.onyx-outro{padding-block:62px 80px}
+.onyx-outro p{font-size:clamp(39px,5vw,68px);letter-spacing:-.064em;line-height:1.1;margin:0}
+.onyx-outro strong{font-weight:560;color:var(--accent)}
+.consult-flow,.consult-model{border-block-start:1px solid var(--line)}
+.consult-flow{background:var(--panel)}
+.consult-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(25px,7vw,108px)}
+.consult-split .lead{margin:0;align-self:end}
+.consult-split h2{margin-bottom:0;text-wrap:initial}
+.flow-steps,.consult-timeline{list-style:none;padding:0;display:grid;margin:48px 0 0;gap:0}
+.flow-steps{grid-template-columns:repeat(6,minmax(0,1fr))}
+.flow-steps li,.consult-timeline li{border-top:1px solid var(--line);padding:20px 18px 12px 0;min-width:0;overflow-wrap:anywhere}
+.flow-steps li:not(:first-child),.consult-timeline li:not(:first-child){padding-left:18px;border-left:1px solid var(--line)}
+.consult-index{display:block;color:var(--accent);font-size:11px;margin-bottom:16px}
+.engagement-modes{margin:28px 0 0}
+.engagement-modes>div{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1fr);gap:18px;border-top:1px solid var(--line);padding-block:18px}
+.engagement-modes dt{font-weight:650}
+.engagement-modes dd{margin:0;color:var(--muted)}
+.consult-approach{border-top:1px solid var(--line)}
+.consult-timeline{grid-template-columns:repeat(4,minmax(0,1fr));margin:30px 0}
+.consult-timeline h3{font-size:clamp(19px,2vw,25px);text-wrap:initial;margin-bottom:12px}
+.consult-timeline p{color:var(--muted);font-size:15px;margin:0}
+.consult-approach-page .process-section{padding-top:0}
+.consult-approach-page .process-section .consult-timeline{margin-block:0}
+.consult-approach-page .values-grid article{border-radius:0;background:transparent;border-width:1px 0 0}
+.consult-home .pilot-section{border-top:1px solid var(--line)}
+.final-cta{border-radius:2px;background:var(--panel)}
+.consult-services .service-index{margin-top:0}
+.consult-services .service-detail{border-bottom:1px solid var(--line);padding-block:clamp(56px,7vw,100px)}
+.consult-services .service-detail-title .large-number{font-family:ui-monospace,monospace;font-size:22px;letter-spacing:-.05em;color:var(--accent);margin-bottom:20px}
+.service-engagement{border-top:1px solid var(--line);padding-top:20px;margin-top:24px}
+.service-engagement .eyebrow{margin-bottom:9px}
+.consult-services .feature-item,.consult-services .platform-card{border-radius:0}
+.consult-services .comparison-section{padding-top:70px}
+.consult-contact .page-intro .lead{max-width:60ch}
+.consult-contact .contact-layout{gap:clamp(28px,7vw,100px)}
+.consult-contact .contact-layout aside{border-top:1px solid var(--line)}
+.consult-contact .contact-layout aside h2{max-width:18ch}
+.consult-contact .form-panel{border-radius:2px}
+.consult-about .founder-story{align-items:start}
+.consult-about .founder-story p{max-width:56ch}
+@media(max-width:1050px){
+ :root{--header-height:68px}
+ .onyx-story{gap:30px}
+ .consult-hero h1{font-size:clamp(42px,5.15vw,60px)}
+}
+@media(max-width:760px){
+ :root{--header-height:64px}
+ .onyx-story{display:block}
+ .onyx-rail{display:none}
+ .consult-hero{display:block;min-height:0;padding-block:52px 28px}
+ .consult-hero h1{font-size:clamp(40px,10vw,65px);max-width:none}
+ .consult-hero .hero-actions .button{flex:0 1 auto}
+ .onyx-mobile{display:grid;place-items:center;isolation:isolate;position:relative;perspective:700px;margin-top:20px}
+ .onyx-mobile::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse,#2b344264,transparent 67%)}
+ .onyx-mobile .onyx-image{width:min(76%,340px)}
+ .consult-capability{min-height:0;padding-block:35px}
+ .onyx-outro{padding-block:42px 54px}
+ .consult-split{grid-template-columns:1fr}
+ .flow-steps{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:28px}
+ .flow-steps li:nth-child(odd){border-left:0;padding-left:0}
+ .consult-timeline{grid-template-columns:1fr;gap:0}
+ .consult-timeline li,.consult-timeline li:not(:first-child){border-left:1px solid var(--line);border-top:0;padding:0 0 28px 20px}
+ .consult-timeline li:last-child{padding-bottom:0}
+ .consult-timeline .consult-index{margin-bottom:8px}
+ .engagement-modes>div{grid-template-columns:1fr;gap:5px}
+ .consult-contact .contact-layout aside{padding-top:22px}
+}
+@media(max-width:370px){
+ .consult-hero .hero-actions .button{width:100%;justify-content:space-between}
+}
+@media(prefers-reduced-motion:reduce){
+ .onyx-image,[data-onyx-chapter]{transform:none!important;opacity:1!important}
+}
