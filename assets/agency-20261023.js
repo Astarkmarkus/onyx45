@@ -77,17 +77,39 @@ form.addEventListener('submit',async e=>{
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),compact=matchMedia('(max-width:760px)');
  const desktop=story.querySelector('.stone-field .onyx-image'),mobile=story.querySelector('.onyx-mobile .onyx-image');
  const chapters=[...story.querySelectorAll('[data-onyx-chapter]')];
+ const field=story.querySelector('.stone-field'),orbit=field.querySelector('.orbit-layer'),toggle=story.querySelector('.orbit-toggle');
+ let paused=false;
+ const economical=(navigator.hardwareConcurrency||4)<=2;
+ function ambient(on){
+  field.classList.toggle('orbit-running',on&&!paused&&!economical&&!compact.matches&&!reduced.matches&&!document.hidden);
+ }
+ function orbitExit(exit){
+  field.style.setProperty('--orbit-exit',exit.toFixed(3));
+  const hidden=exit>.98;
+  orbit.inert=hidden;orbit.setAttribute('aria-hidden',String(hidden));
+  for(const link of orbit.querySelectorAll('a')){if(hidden)link.setAttribute('tabindex','-1');else link.removeAttribute('tabindex');}
+  toggle.hidden=hidden||reduced.matches||compact.matches||economical;
+  ambient(!hidden);
+ }
+ toggle.addEventListener('click',()=>{
+  paused=!paused;toggle.setAttribute('aria-pressed',String(paused));
+  toggle.textContent=paused?toggle.dataset.play:toggle.dataset.pause;
+  ambient(near&&parseFloat(field.style.getPropertyValue('--orbit-exit')||0)<.98);
+ });
+ document.addEventListener('visibilitychange',()=>{ambient(near);queue();});
  const poses=[[0,0,0,1,1],[-16,-10,10,.97,1],[25,10,-14,.94,1],[-27,20,12,.91,1],[-39,36,-16,.76,.25]];
  let frame=0,near=true,enabled=false;
  const limit=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
  function clear(){
+  orbitExit(0);ambient(false);
   for(const el of [desktop,mobile,...chapters]){el.style.removeProperty('transform');el.style.removeProperty('opacity');}
  }
  function paint(){
   frame=0;
-  if(!enabled||!near)return;
+  if(!enabled||!near){ambient(false);return;}
   const box=story.getBoundingClientRect(),height=innerHeight;
-  if(box.bottom<0||box.top>height)return;
+  if(box.bottom<0||box.top>height){ambient(false);return;}
+  orbitExit(limit(-box.top/Math.max(1,chapters[0].offsetHeight*.65)));
   if(compact.matches){
    const t=limit(-box.top/Math.max(1,chapters[0].offsetHeight));
    mobile.style.transform='rotate('+(-6*t).toFixed(2)+'deg) translateY('+(12*t).toFixed(2)+'px)';
@@ -115,7 +137,7 @@ form.addEventListener('submit',async e=>{
  }
  window.addEventListener('scroll',queue,{passive:true});
  window.addEventListener('resize',queue,{passive:true});
- if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{near=entry.isIntersecting;queue();}).observe(story);
+ if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{near=entry.isIntersecting;if(!near)ambient(false);queue();}).observe(story);
  for(const media of [reduced,compact]){
   if(media.addEventListener)media.addEventListener('change',mode);
   else if(media.addListener)media.addListener(mode);
