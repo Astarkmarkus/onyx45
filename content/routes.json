@@ -58,5 +58,23 @@
     "sv": "/sv/legal/",
     "es": "/es/legal/",
     "ca": "/ca/legal/"
+  },
+  "work-crm": {
+    "en": "/work/crm/",
+    "sv": "/sv/work/crm/",
+    "es": "/es/work/crm/",
+    "ca": "/ca/work/crm/"
+  },
+  "work-prospecting": {
+    "en": "/work/prospecting/",
+    "sv": "/sv/work/prospecting/",
+    "es": "/es/work/prospecting/",
+    "ca": "/ca/work/prospecting/"
+  },
+  "work-brand-transformation": {
+    "en": "/work/brand-transformation/",
+    "sv": "/sv/work/brand-transformation/",
+    "es": "/es/work/brand-transformation/",
+    "ca": "/ca/work/brand-transformation/"
   }
 }

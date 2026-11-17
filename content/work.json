@@ -1,0 +1,538 @@
+{
+  "en": {
+    "hero": "We help businesses connect marketing, customer acquisition and sales execution — turning disconnected activities into one coordinated growth process.",
+    "intro": "Growth becomes easier to manage when your marketing, outreach and sales activities work towards the same objective. ONYX45 helps bring those activities together through clear planning, practical execution and structured follow-up.",
+    "descriptions": [
+      "We plan and coordinate your customer acquisition activities — connecting marketing, prospecting, lead handling and sales follow-up under one clear plan.",
+      "We plan, launch and manage targeted advertising campaigns across Google, Meta and TikTok, with clear objectives and performance reporting.",
+      "We research relevant companies, engage decision-makers and help create qualified sales meetings through structured outreach and follow-up."
+    ],
+    "values": [
+      "One coordinated process. Clear responsibilities. Better visibility of your growth activities.",
+      "Advertising aligned with your audience, objectives and customer acquisition strategy.",
+      "More structured prospecting and relevant opportunities for your sales team."
+    ],
+    "serviceCtas": [
+      "Explore Growth Management",
+      "Explore Advertising",
+      "Explore Lead Generation"
+    ],
+    "audiences": [
+      "For businesses that need marketing and sales activities coordinated across several workstreams.",
+      "For businesses launching or improving advertising in agreed channels.",
+      "For B2B teams that need researched accounts, relevant conversations and consistent follow-up."
+    ],
+    "measures": [
+      "Agreed milestones, completed activities, pipeline progress and the indicators defined for the project.",
+      "Campaign delivery, relevant conversions and performance against the agreed objectives and budget.",
+      "Unique companies contacted, documented outcomes, follow-ups and confirmed meetings — reported separately."
+    ],
+    "projectsLabel": "Our projects & processes",
+    "projectsHeading": "Built through practice. Guided by process.",
+    "projectsIntro": "Before helping businesses organize their growth activities, we started by building the processes behind our own operations. Explore how ONYX45 approaches sales infrastructure, prospecting and digital execution.",
+    "internal": "ONYX45 Internal Project",
+    "view": "View Project",
+    "inside": "Inside Our Work",
+    "back": "Back to Inside Our Work",
+    "challenge": "The challenge",
+    "approach": "Our approach",
+    "built": "What we built",
+    "demonstrates": "What this demonstrates",
+    "interface": "Actual application interface, rendered locally from the CRM source. Records and totals withheld for privacy.",
+    "before": "Before · previous ONYX45 website",
+    "after": "After · Heritage Editorial website",
+    "who": "Who it is for",
+    "measure": "What we measure",
+    "related": "Discuss a similar assignment",
+    "pilot": "More about a focused pilot",
+    "cases": [
+      {
+        "category": "Sales Operations / Internal Project",
+        "title": "Building a structured B2B customer acquisition workflow.",
+        "summary": "We developed our own CRM workflow to organize prospect research, sales conversations, follow-ups, opportunities and performance tracking.",
+        "challenge": "As our prospecting developed, we needed a consistent process to manage companies, activities and next steps. Information had to remain accessible and actionable.",
+        "approach": "We connected company research, activity logging and follow-up scheduling with a sales pipeline and daily work planning.",
+        "built": "An internal workflow covering company dossiers, call history, follow-up dates, meeting tracking and operational reporting. Screenshots show the actual frontend with business records withheld, rather than invented customer data.",
+        "demonstrates": "How we structure a process and coordinate its stages, from identifying a prospect to recording the next action. This is our own operating infrastructure, not a client outcome.",
+        "features": [
+          "Company and prospect records",
+          "Sales pipeline and contact history",
+          "Follow-up and meeting scheduling",
+          "Daily sales planning and activity reporting"
+        ]
+      },
+      {
+        "category": "B2B Lead Generation / Internal Project",
+        "title": "From a research base to a structured prospecting process.",
+        "summary": "Our own business development connects company research, qualification, outreach and documented next steps.",
+        "challenge": "A company list does not automatically create business opportunities. Relevant research, consistent outreach and reliable follow-up need to work together.",
+        "approach": "Identify relevant businesses, assess fit, initiate a conversation, document the next step, arrange a qualified meeting when appropriate and review the work.",
+        "built": "A prospecting method for our own business development, starting from an estimated research base of approximately 2,600 companies supplied by the founder. Research, qualification, outreach and next steps each have a defined place in the process.",
+        "demonstrates": "The practical difference between a research base, a contact attempt, a follow-up and a confirmed meeting. These are ONYX45’s internal activities, not client campaign results.",
+        "features": [
+          "Identify and qualify relevant accounts",
+          "Contact decision-makers with context",
+          "Record outcomes and next actions",
+          "Book confirmed meetings and review activity"
+        ]
+      },
+      {
+        "category": "Brand Strategy / Digital Project Execution",
+        "title": "Redefining how ONYX45 communicates its business value.",
+        "summary": "We aligned our positioning, service architecture, identity and multilingual website around a clearer consultancy offer.",
+        "challenge": "Our earlier technical growth-agency aesthetic needed to reflect a broader B2B Growth & Business Consultancy position.",
+        "approach": "We coordinated business positioning, service structure, brand identity, page architecture, multilingual content and the contact journey.",
+        "built": "A Heritage Bordeaux website with a Finnish landscape hero, four main navigation items, four languages and a clearer enquiry flow. The comparison uses genuine screenshots of the previous and current website.",
+        "demonstrates": "How we organize and implement a digital project from a communication problem to a coordinated release. We do not claim a measured conversion uplift without analytics or a documented experiment.",
+        "features": [
+          "Business positioning and service structure",
+          "Brand identity and responsive website",
+          "English, Swedish, Spanish and Catalan",
+          "Accessibility and privacy considerations"
+        ]
+      }
+    ],
+    "workflowLabel": "How we work",
+    "workflowHeading": "From opportunities to organized execution.",
+    "workflowCta": "Let’s Discuss Your Growth Plan",
+    "steps": [
+      [
+        "Research",
+        "Identify relevant companies and understand their context."
+      ],
+      [
+        "Qualify",
+        "Assess fit against the agreed customer profile."
+      ],
+      [
+        "Engage",
+        "Start relevant conversations with decision-makers."
+      ],
+      [
+        "Follow Up",
+        "Document outcomes and agree the next action."
+      ],
+      [
+        "Coordinate",
+        "Connect people, responsibilities and delivery."
+      ],
+      [
+        "Improve",
+        "Review the evidence and adjust the approach."
+      ]
+    ],
+    "metricsHeading": "An estimated research base. A structured way forward.",
+    "estimateLabel": "Founder-reported research base",
+    "recordsLabel": "Company records in current CRM",
+    "followupsLabel": "Current follow-up schedules",
+    "meetingsLabel": "Confirmed or completed meetings recorded",
+    "metricsNote": "Approximately 2,600 identified companies, based on the founder’s estimate for ONYX45’s own business development research. The figure is approximate and has not been independently verified.",
+    "finalEyebrow": "Let’s build with purpose",
+    "finalHeading": "Let’s identify your next growth opportunity.",
+    "finalText": "Tell us where your business wants to grow and what currently stands in the way. We’ll explore whether ONYX45 can support you with a focused assignment or a coordinated growth project.",
+    "finalCta": "Request a Free Consultation",
+    "finalFine": "A short introductory conversation. No obligation."
+  },
+  "sv": {
+    "hero": "Vi hjälper företag att förena marknadsföring, kundanskaffning och försäljningsarbete — så att separata aktiviteter blir en samordnad tillväxtprocess.",
+    "intro": "Tillväxt blir enklare att leda när marknadsföring, kundbearbetning och försäljning arbetar mot samma mål. ONYX45 samlar insatserna genom tydlig planering, praktiskt genomförande och strukturerad uppföljning.",
+    "descriptions": [
+      "Vi planerar och samordnar er kundanskaffning — med marknadsföring, prospektering, leadhantering och säljuppföljning under en tydlig plan.",
+      "Vi planerar, lanserar och driver riktade annonskampanjer på Google, Meta och TikTok, med tydliga mål och resultatrapportering.",
+      "Vi undersöker relevanta företag, kontaktar beslutsfattare och hjälper er att skapa kvalificerade säljmöten genom strukturerad bearbetning och uppföljning."
+    ],
+    "values": [
+      "En samordnad process. Tydligt ansvar. Bättre överblick över tillväxtarbetet.",
+      "Annonsering som utgår från er målgrupp, era mål och er strategi för kundanskaffning.",
+      "Mer strukturerad prospektering och relevanta affärsmöjligheter för ert säljteam."
+    ],
+    "serviceCtas": [
+      "Utforska tillväxtledning",
+      "Utforska annonsering",
+      "Utforska leadgenerering"
+    ],
+    "audiences": [
+      "För företag som behöver samordna marknadsföring och försäljning över flera arbetsområden.",
+      "För företag som vill lansera eller förbättra annonsering i överenskomna kanaler.",
+      "För B2B-team som behöver undersökta målföretag, relevanta samtal och konsekvent uppföljning."
+    ],
+    "measures": [
+      "Överenskomna milstolpar, genomförda aktiviteter, utveckling i säljprocessen och projektets definierade nyckeltal.",
+      "Kampanjleverans, relevanta konverteringar och resultat mot överenskomna mål och budget.",
+      "Unika kontaktade företag, dokumenterade utfall, uppföljningar och bekräftade möten — redovisade var för sig."
+    ],
+    "projectsLabel": "Våra projekt & processer",
+    "projectsHeading": "Byggt i praktiken. Drivet av struktur.",
+    "projectsIntro": "Vi började med att bygga processerna bakom vår egen verksamhet. Här visar vi hur ONYX45 arbetar med säljstruktur, prospektering och digitalt genomförande.",
+    "internal": "ONYX45 Internt projekt",
+    "view": "Visa projekt",
+    "inside": "Inblick i vårt arbete",
+    "back": "Tillbaka till våra projekt",
+    "challenge": "Utmaningen",
+    "approach": "Vårt arbetssätt",
+    "built": "Det vi byggde",
+    "demonstrates": "Det arbetet visar",
+    "interface": "Verkligt applikationsgränssnitt, renderat lokalt från CRM-koden. Poster och totalsiffror är dolda av integritetsskäl.",
+    "before": "Före · tidigare ONYX45-webbplats",
+    "after": "Efter · Heritage Editorial-webbplatsen",
+    "who": "Vem tjänsten passar",
+    "measure": "Det vi följer upp",
+    "related": "Diskutera ett liknande uppdrag",
+    "pilot": "Mer om en avgränsad pilot",
+    "cases": [
+      {
+        "category": "Säljprocesser / Internt projekt",
+        "title": "En strukturerad process för B2B-kundanskaffning.",
+        "summary": "Vi utvecklade ett eget CRM-arbetsflöde för företagsresearch, säljsamtal, uppföljning, affärsmöjligheter och aktivitetsuppföljning.",
+        "challenge": "När prospekteringen växte behövde vi ett enhetligt sätt att hantera företag, aktiviteter och nästa steg. Informationen behövde vara tillgänglig och möjlig att agera på.",
+        "approach": "Vi kopplade ihop företagsresearch, aktivitetsloggning och planerade uppföljningar med en säljprocess och daglig arbetsplanering.",
+        "built": "Ett internt arbetsflöde med företagsprofiler, samtalshistorik, uppföljningstider, möteshantering och rapportering. Bilderna visar det verkliga gränssnittet med verksamhetsdata dold, utan påhittade kundposter.",
+        "demonstrates": "Hur vi strukturerar en process och samordnar stegen från identifierat prospekt till dokumenterad nästa åtgärd. Detta är vår egen arbetsstruktur, inte ett kundresultat.",
+        "features": [
+          "Företags- och prospektposter",
+          "Säljprocess och kontakthistorik",
+          "Planering av uppföljningar och möten",
+          "Daglig säljplanering och aktivitetsuppföljning"
+        ]
+      },
+      {
+        "category": "B2B-leadgenerering / Internt projekt",
+        "title": "Från företagsunderlag till strukturerad prospektering.",
+        "summary": "Vår egen affärsutveckling kopplar ihop företagsresearch, kvalificering, kundbearbetning och dokumenterade nästa steg.",
+        "challenge": "En företagslista skapar inte affärsmöjligheter av sig själv. Relevant research, konsekvent bearbetning och pålitlig uppföljning behöver fungera tillsammans.",
+        "approach": "Identifiera relevanta företag, bedöma passform, inleda kontakt, dokumentera nästa steg, boka kvalificerade möten när det är relevant och utvärdera arbetet.",
+        "built": "Ett prospekteringsarbete för vår egen affärsutveckling, med utgångspunkt i en uppskattad researchbas på cirka 2 600 företag enligt grundaren. Research, kvalificering, kontakt och nästa steg har varsin tydlig plats i processen.",
+        "demonstrates": "Den praktiska skillnaden mellan researchunderlag, kontaktförsök, uppföljningar och bekräftade möten. Detta är ONYX45:s interna arbete, inte resultat från kundkampanjer.",
+        "features": [
+          "Identifiera och kvalificera målföretag",
+          "Kontakta beslutsfattare med relevant bakgrund",
+          "Dokumentera utfall och nästa åtgärd",
+          "Boka bekräftade möten och utvärdera aktiviteter"
+        ]
+      },
+      {
+        "category": "Varumärkesstrategi / Digitalt genomförande",
+        "title": "En tydligare bild av ONYX45:s affärsvärde.",
+        "summary": "Vi samordnade positionering, tjänstestruktur, identitet och flerspråkig webbplats kring ett tydligare konsultationserbjudande.",
+        "challenge": "Vårt tidigare tekniskt präglade byråuttryck behövde spegla en bredare position inom B2B-tillväxt och affärsrådgivning.",
+        "approach": "Vi samordnade positionering, tjänstestruktur, varumärkesidentitet, sidstruktur, flerspråkigt innehåll och kontaktflöde.",
+        "built": "En Heritage Bordeaux-webbplats med finskt landskap, fyra huvudlänkar, fyra språk och ett tydligare förfrågningsflöde. Jämförelsen använder verkliga skärmbilder av den tidigare och den nuvarande webbplatsen.",
+        "demonstrates": "Hur vi organiserar och genomför ett digitalt projekt från kommunikationsproblem till samordnad lansering. Vi påstår ingen uppmätt konverteringsökning utan analysdata eller dokumenterade tester.",
+        "features": [
+          "Positionering och tjänstestruktur",
+          "Varumärkesidentitet och responsiv webbplats",
+          "Engelska, svenska, spanska och katalanska",
+          "Tillgänglighets- och integritetsfrågor"
+        ]
+      }
+    ],
+    "workflowLabel": "Så arbetar vi",
+    "workflowHeading": "Från möjligheter till organiserat genomförande.",
+    "workflowCta": "Låt oss diskutera er tillväxtplan",
+    "steps": [
+      [
+        "Undersök",
+        "Identifiera relevanta företag och förstå deras situation."
+      ],
+      [
+        "Kvalificera",
+        "Bedöm passformen mot den överenskomna kundprofilen."
+      ],
+      [
+        "Inled kontakt",
+        "Starta relevanta samtal med beslutsfattare."
+      ],
+      [
+        "Följ upp",
+        "Dokumentera utfallet och bestäm nästa åtgärd."
+      ],
+      [
+        "Samordna",
+        "Knyt ihop människor, ansvar och leverans."
+      ],
+      [
+        "Förbättra",
+        "Utvärdera underlaget och justera arbetssättet."
+      ]
+    ],
+    "metricsHeading": "En uppskattad researchbas. Ett strukturerat nästa steg.",
+    "estimateLabel": "Researchunderlag enligt grundaren",
+    "recordsLabel": "Företagsposter i nuvarande CRM",
+    "followupsLabel": "Nu registrerade uppföljningstider",
+    "meetingsLabel": "Registrerade bekräftade eller genomförda möten",
+    "metricsNote": "Cirka 2 600 identifierade företag, enligt grundarens uppskattning av ONYX45:s eget researchunderlag för affärsutveckling. Uppgiften är ungefärlig och har inte verifierats oberoende.",
+    "finalEyebrow": "Låt oss bygga med mening",
+    "finalHeading": "Låt oss identifiera er nästa tillväxtmöjlighet.",
+    "finalText": "Berätta vart ni vill ta företaget och vad som står i vägen i dag. Vi undersöker om ONYX45 kan hjälpa till med ett avgränsat uppdrag eller ett samordnat tillväxtprojekt.",
+    "finalCta": "Boka ett kostnadsfritt introduktionssamtal",
+    "finalFine": "Ett kort första samtal. Utan förpliktelser."
+  },
+  "es": {
+    "hero": "Ayudamos a las empresas a conectar marketing, captación de clientes y ejecución comercial, convirtiendo actividades aisladas en un proceso de crecimiento coordinado.",
+    "intro": "El crecimiento resulta más fácil de gestionar cuando el marketing, la prospección y las ventas comparten un objetivo. ONYX45 conecta estas actividades con planificación clara, ejecución práctica y seguimiento estructurado.",
+    "descriptions": [
+      "Planificamos y coordinamos la captación de clientes, conectando marketing, prospección, gestión de leads y seguimiento comercial bajo un plan claro.",
+      "Planificamos, lanzamos y gestionamos campañas dirigidas en Google, Meta y TikTok, con objetivos claros e informes de rendimiento.",
+      "Investigamos empresas relevantes, contactamos con responsables de decisión y ayudamos a generar reuniones comerciales cualificadas mediante prospección y seguimiento estructurados."
+    ],
+    "values": [
+      "Un proceso coordinado. Responsabilidades claras. Mayor visibilidad de las actividades de crecimiento.",
+      "Publicidad alineada con tu público, objetivos y estrategia de captación.",
+      "Prospección más estructurada y oportunidades relevantes para tu equipo comercial."
+    ],
+    "serviceCtas": [
+      "Explora la gestión del crecimiento",
+      "Explora la publicidad",
+      "Explora la generación de leads"
+    ],
+    "audiences": [
+      "Para empresas que necesitan coordinar marketing y ventas entre varias áreas de trabajo.",
+      "Para empresas que quieren lanzar o mejorar la publicidad en los canales acordados.",
+      "Para equipos B2B que necesitan cuentas investigadas, conversaciones pertinentes y seguimiento constante."
+    ],
+    "measures": [
+      "Hitos acordados, actividades realizadas, avance comercial e indicadores definidos para el proyecto.",
+      "Ejecución de campañas, conversiones relevantes y resultados frente a objetivos y presupuesto.",
+      "Empresas únicas contactadas, resultados documentados, seguimientos y reuniones confirmadas, por separado."
+    ],
+    "projectsLabel": "Nuestros proyectos y procesos",
+    "projectsHeading": "Construido en la práctica. Guiado por un método.",
+    "projectsIntro": "Empezamos construyendo los procesos de nuestras propias operaciones. Descubre cómo ONYX45 aborda la estructura comercial, la prospección y la ejecución digital.",
+    "internal": "Proyecto interno de ONYX45",
+    "view": "Ver proyecto",
+    "inside": "Nuestro trabajo por dentro",
+    "back": "Volver a nuestros proyectos",
+    "challenge": "El reto",
+    "approach": "Nuestro enfoque",
+    "built": "Lo que construimos",
+    "demonstrates": "Lo que demuestra",
+    "interface": "Interfaz real de la aplicación, renderizada localmente desde el código del CRM. Registros y totales ocultos por privacidad.",
+    "before": "Antes · web anterior de ONYX45",
+    "after": "Después · web Heritage Editorial",
+    "who": "Para quién es",
+    "measure": "Qué medimos",
+    "related": "Hablemos de un encargo similar",
+    "pilot": "Más sobre un piloto definido",
+    "cases": [
+      {
+        "category": "Operaciones comerciales / Proyecto interno",
+        "title": "Un flujo estructurado de captación de clientes B2B.",
+        "summary": "Desarrollamos un flujo CRM propio para organizar la investigación, las conversaciones comerciales, los seguimientos y las oportunidades.",
+        "challenge": "A medida que crecía la prospección, necesitábamos un proceso coherente para gestionar empresas, actividades y próximos pasos.",
+        "approach": "Conectamos investigación, registro de actividad y seguimientos con el pipeline y la planificación diaria.",
+        "built": "Un flujo interno con fichas de empresa, historial de llamadas, fechas de seguimiento, gestión de reuniones e informes. Las imágenes muestran el frontend real con los datos ocultos, sin registros de clientes inventados.",
+        "demonstrates": "Cómo estructuramos un proceso y coordinamos sus etapas, desde identificar un prospecto hasta documentar la siguiente acción. Es infraestructura propia, no un resultado para un cliente.",
+        "features": [
+          "Fichas de empresas y prospectos",
+          "Pipeline e historial de contacto",
+          "Seguimientos y reuniones",
+          "Planificación diaria e informes de actividad"
+        ]
+      },
+      {
+        "category": "Generación de leads B2B / Proyecto interno",
+        "title": "De una base de investigación a una prospección estructurada.",
+        "summary": "Nuestro desarrollo comercial conecta investigación, cualificación, contacto y próximos pasos documentados.",
+        "challenge": "Una lista de empresas no crea oportunidades por sí sola. La investigación, el contacto pertinente y el seguimiento deben funcionar juntos.",
+        "approach": "Identificar empresas, evaluar su encaje, iniciar contacto, documentar el siguiente paso, concertar reuniones cuando exista relevancia y revisar la actividad.",
+        "built": "Un método de prospección para nuestro propio desarrollo comercial, a partir de una base estimada de unas 2.600 empresas facilitada por el fundador. Investigación, cualificación, contacto y siguientes pasos tienen un lugar definido en el proceso.",
+        "demonstrates": "La diferencia entre una base de investigación, un intento de contacto, un seguimiento y una reunión confirmada. Son actividades internas de ONYX45, no resultados de campañas de clientes.",
+        "features": [
+          "Identificar y cualificar cuentas",
+          "Contactar con contexto",
+          "Documentar resultados y siguientes pasos",
+          "Confirmar reuniones y revisar la actividad"
+        ]
+      },
+      {
+        "category": "Estrategia de marca / Ejecución digital",
+        "title": "Una comunicación más clara del valor de ONYX45.",
+        "summary": "Alineamos posicionamiento, servicios, identidad y web multilingüe con una oferta de consultoría más clara.",
+        "challenge": "La estética tecnológica anterior debía reflejar una posición más amplia como consultoría B2B de crecimiento y negocio.",
+        "approach": "Coordinamos posicionamiento, servicios, identidad, arquitectura web, contenido multilingüe y recorrido de contacto.",
+        "built": "Una web Heritage Bordeaux con paisaje finlandés, cuatro enlaces principales, cuatro idiomas y un flujo de consulta más claro. La comparación utiliza capturas auténticas de la web anterior y la actual.",
+        "demonstrates": "Cómo organizamos y ejecutamos un proyecto digital desde un problema de comunicación hasta su publicación. No afirmamos mejoras de conversión sin analítica o pruebas documentadas.",
+        "features": [
+          "Posicionamiento y estructura de servicios",
+          "Identidad y web adaptable",
+          "Inglés, sueco, español y catalán",
+          "Consideraciones de accesibilidad y privacidad"
+        ]
+      }
+    ],
+    "workflowLabel": "Cómo trabajamos",
+    "workflowHeading": "De las oportunidades a una ejecución organizada.",
+    "workflowCta": "Hablemos de tu plan de crecimiento",
+    "steps": [
+      [
+        "Investigar",
+        "Identificar empresas pertinentes y comprender su contexto."
+      ],
+      [
+        "Cualificar",
+        "Evaluar el encaje con el perfil de cliente acordado."
+      ],
+      [
+        "Contactar",
+        "Iniciar conversaciones relevantes con responsables de decisión."
+      ],
+      [
+        "Dar seguimiento",
+        "Documentar resultados y acordar la siguiente acción."
+      ],
+      [
+        "Coordinar",
+        "Conectar personas, responsabilidades y ejecución."
+      ],
+      [
+        "Mejorar",
+        "Revisar la evidencia y ajustar el enfoque."
+      ]
+    ],
+    "metricsHeading": "Una base estimada. Un proceso para avanzar.",
+    "estimateLabel": "Base de investigación declarada por el fundador",
+    "recordsLabel": "Fichas de empresa en el CRM actual",
+    "followupsLabel": "Seguimientos actualmente programados",
+    "meetingsLabel": "Reuniones confirmadas o realizadas registradas",
+    "metricsNote": "Aproximadamente 2.600 empresas identificadas, según la estimación del fundador para la investigación comercial de ONYX45. La cifra es aproximada y no se ha verificado de forma independiente.",
+    "finalEyebrow": "Construyamos con propósito",
+    "finalHeading": "Identifiquemos tu próxima oportunidad de crecimiento.",
+    "finalText": "Cuéntanos hacia dónde quieres llevar tu empresa y qué lo dificulta hoy. Exploraremos si ONYX45 puede ayudarte con un encargo concreto o un proyecto de crecimiento coordinado.",
+    "finalCta": "Solicita una consulta inicial gratuita",
+    "finalFine": "Una breve conversación inicial. Sin compromiso."
+  },
+  "ca": {
+    "hero": "Ajudem les empreses a connectar màrqueting, captació de clients i execució comercial, convertint activitats aïllades en un procés de creixement coordinat.",
+    "intro": "El creixement és més fàcil de gestionar quan el màrqueting, la prospecció i les vendes comparteixen objectiu. ONYX45 connecta aquestes activitats amb planificació clara, execució pràctica i seguiment estructurat.",
+    "descriptions": [
+      "Planifiquem i coordinem la captació de clients, connectant màrqueting, prospecció, gestió de leads i seguiment comercial sota un pla clar.",
+      "Planifiquem, llancem i gestionem campanyes dirigides a Google, Meta i TikTok, amb objectius clars i informes de rendiment.",
+      "Investiguem empreses rellevants, contactem amb responsables de decisió i ajudem a generar reunions comercials qualificades amb prospecció i seguiment estructurats."
+    ],
+    "values": [
+      "Un procés coordinat. Responsabilitats clares. Més visibilitat de les activitats de creixement.",
+      "Publicitat alineada amb el públic, els objectius i l’estratègia de captació.",
+      "Prospecció més estructurada i oportunitats rellevants per a l’equip comercial."
+    ],
+    "serviceCtas": [
+      "Explora la gestió del creixement",
+      "Explora la publicitat",
+      "Explora la generació de leads"
+    ],
+    "audiences": [
+      "Per a empreses que necessiten coordinar màrqueting i vendes entre diverses àrees de treball.",
+      "Per a empreses que volen llançar o millorar la publicitat als canals acordats.",
+      "Per a equips B2B que necessiten comptes investigats, converses pertinents i seguiment constant."
+    ],
+    "measures": [
+      "Fites acordades, activitats completades, progrés comercial i indicadors definits per al projecte.",
+      "Execució de campanyes, conversions rellevants i resultats respecte als objectius i el pressupost.",
+      "Empreses úniques contactades, resultats documentats, seguiments i reunions confirmades, per separat."
+    ],
+    "projectsLabel": "Els nostres projectes i processos",
+    "projectsHeading": "Construït a la pràctica. Guiat per un mètode.",
+    "projectsIntro": "Vam començar construint els processos de les nostres pròpies operacions. Descobreix com ONYX45 treballa l’estructura comercial, la prospecció i l’execució digital.",
+    "internal": "Projecte intern d’ONYX45",
+    "view": "Veure el projecte",
+    "inside": "El nostre treball per dins",
+    "back": "Torna als nostres projectes",
+    "challenge": "El repte",
+    "approach": "El nostre enfocament",
+    "built": "Què vam construir",
+    "demonstrates": "Què demostra",
+    "interface": "Interfície real de l’aplicació, renderitzada localment des del codi del CRM. Registres i totals ocults per privacitat.",
+    "before": "Abans · web anterior d’ONYX45",
+    "after": "Després · web Heritage Editorial",
+    "who": "Per a qui és",
+    "measure": "Què mesurem",
+    "related": "Parlem d’un encàrrec similar",
+    "pilot": "Més sobre un pilot definit",
+    "cases": [
+      {
+        "category": "Operacions comercials / Projecte intern",
+        "title": "Un flux estructurat de captació de clients B2B.",
+        "summary": "Vam desenvolupar un flux CRM propi per organitzar la recerca, les converses comercials, els seguiments i les oportunitats.",
+        "challenge": "A mesura que creixia la prospecció, necessitàvem un procés coherent per gestionar empreses, activitats i passos següents.",
+        "approach": "Vam connectar recerca, registre d’activitat i seguiments amb el pipeline i la planificació diària.",
+        "built": "Un flux intern amb fitxes d’empresa, historial de trucades, dates de seguiment, gestió de reunions i informes. Les imatges mostren el frontend real amb les dades ocultes, sense registres de clients inventats.",
+        "demonstrates": "Com estructurem un procés i en coordinem les etapes, des d’identificar un prospecte fins a documentar l’acció següent. És infraestructura pròpia, no un resultat per a un client.",
+        "features": [
+          "Fitxes d’empreses i prospectes",
+          "Pipeline i historial de contacte",
+          "Seguiments i reunions",
+          "Planificació diària i informes d’activitat"
+        ]
+      },
+      {
+        "category": "Generació de leads B2B / Projecte intern",
+        "title": "D’una base de recerca a una prospecció estructurada.",
+        "summary": "El nostre desenvolupament comercial connecta recerca, qualificació, contacte i passos següents documentats.",
+        "challenge": "Una llista d’empreses no crea oportunitats per si sola. La recerca, el contacte pertinent i el seguiment han de funcionar plegats.",
+        "approach": "Identificar empreses, valorar-ne l’encaix, iniciar contacte, documentar el pas següent, concertar reunions quan sigui pertinent i revisar l’activitat.",
+        "built": "Un mètode de prospecció per al nostre propi desenvolupament comercial, a partir d’una base estimada d’unes 2.600 empreses facilitada pel fundador. Recerca, qualificació, contacte i passos següents tenen un lloc definit en el procés.",
+        "demonstrates": "La diferència entre una base de recerca, un intent de contacte, un seguiment i una reunió confirmada. Són activitats internes d’ONYX45, no resultats de campanyes de clients.",
+        "features": [
+          "Identificar i qualificar comptes",
+          "Contactar amb context",
+          "Documentar resultats i passos següents",
+          "Confirmar reunions i revisar l’activitat"
+        ]
+      },
+      {
+        "category": "Estratègia de marca / Execució digital",
+        "title": "Una comunicació més clara del valor d’ONYX45.",
+        "summary": "Vam alinear posicionament, serveis, identitat i web multilingüe amb una oferta de consultoria més clara.",
+        "challenge": "L’estètica tecnològica anterior havia de reflectir una posició més àmplia com a consultoria B2B de creixement i negoci.",
+        "approach": "Vam coordinar posicionament, serveis, identitat, arquitectura web, contingut multilingüe i recorregut de contacte.",
+        "built": "Un web Heritage Bordeaux amb paisatge finlandès, quatre enllaços principals, quatre idiomes i un flux de consulta més clar. La comparació utilitza captures autèntiques del web anterior i l’actual.",
+        "demonstrates": "Com organitzem i executem un projecte digital des d’un problema de comunicació fins a la publicació. No afirmem millores de conversió sense analítica o proves documentades.",
+        "features": [
+          "Posicionament i estructura de serveis",
+          "Identitat i web adaptable",
+          "Anglès, suec, espanyol i català",
+          "Consideracions d’accessibilitat i privacitat"
+        ]
+      }
+    ],
+    "workflowLabel": "Com treballem",
+    "workflowHeading": "De les oportunitats a una execució organitzada.",
+    "workflowCta": "Parlem del teu pla de creixement",
+    "steps": [
+      [
+        "Investigar",
+        "Identificar empreses pertinents i comprendre’n el context."
+      ],
+      [
+        "Qualificar",
+        "Valorar l’encaix amb el perfil de client acordat."
+      ],
+      [
+        "Contactar",
+        "Iniciar converses rellevants amb responsables de decisió."
+      ],
+      [
+        "Fer seguiment",
+        "Documentar resultats i acordar l’acció següent."
+      ],
+      [
+        "Coordinar",
+        "Connectar persones, responsabilitats i execució."
+      ],
+      [
+        "Millorar",
+        "Revisar les dades i ajustar l’enfocament."
+      ]
+    ],
+    "metricsHeading": "Una base estimada. Un procés per avançar.",
+    "estimateLabel": "Base de recerca declarada pel fundador",
+    "recordsLabel": "Fitxes d’empresa al CRM actual",
+    "followupsLabel": "Seguiments actualment programats",
+    "meetingsLabel": "Reunions confirmades o fetes registrades",
+    "metricsNote": "Aproximadament 2.600 empreses identificades, segons l’estimació del fundador per a la recerca comercial d’ONYX45. La xifra és aproximada i no s’ha verificat de manera independent.",
+    "finalEyebrow": "Construïm amb propòsit",
+    "finalHeading": "Identifiquem la teva propera oportunitat de creixement.",
+    "finalText": "Explica’ns cap a on vols portar l’empresa i què ho dificulta avui. Explorarem si ONYX45 pot ajudar-te amb un encàrrec concret o un projecte de creixement coordinat.",
+    "finalCta": "Sol·licita una consulta inicial gratuïta",
+    "finalFine": "Una breu conversa inicial. Sense compromís."
+  }
+}

@@ -17,7 +17,7 @@
 (()=>{
  if(!window.IntersectionObserver||!window.matchMedia||navigator.connection?.saveData)return;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');if(reduced.matches)return;
- const targets=[...document.querySelectorAll('main>.heritage-intro,main>.consult-flow,main>.consult-model,main>.heritage-why,main>.final-cta,main>.page-intro,main>.founder-story,main>.founder-meaning,main>.founder-vision,main>.service-detail,main>.contact-layout,.heritage-service-grid>article,.consult-timeline>li,.heritage-engagement-grid>article')];
+ const targets=[...document.querySelectorAll('main>.inside-work,main>.work-workflow,main>.work-content,.work-grid>article,main>.heritage-intro,main>.consult-flow,main>.consult-model,main>.heritage-why,main>.final-cta,main>.page-intro,main>.founder-story,main>.founder-meaning,main>.founder-vision,main>.service-detail,main>.contact-layout,.heritage-service-grid>article,.consult-timeline>li,.heritage-engagement-grid>article')];
  const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;observer.unobserve(entry.target);if(reduced.matches||entry.target.contains(document.activeElement)||entry.boundingClientRect.bottom<0)continue;entry.target.classList.add('motion-reveal');}},{threshold:0,rootMargin:'0px 0px -32px 0px'});
  targets.forEach((target,i)=>{target.style.setProperty('--reveal-delay',`${i%3*45}ms`);target.addEventListener('animationend',()=>target.classList.remove('motion-reveal'),{once:true});target.addEventListener('focusin',()=>target.classList.remove('motion-reveal'));observer.observe(target);});
  reduced.addEventListener('change',e=>{if(e.matches){observer.disconnect();targets.forEach(target=>target.classList.remove('motion-reveal'));}});
