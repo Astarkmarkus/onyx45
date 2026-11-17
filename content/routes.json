@@ -52,5 +52,11 @@
     "sv": "/sv/villkor/",
     "es": "/es/condiciones/",
     "ca": "/ca/condicions/"
+  },
+  "legal": {
+    "en": "/legal/",
+    "sv": "/sv/legal/",
+    "es": "/es/legal/",
+    "ca": "/ca/legal/"
   }
 }

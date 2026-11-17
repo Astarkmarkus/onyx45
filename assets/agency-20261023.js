@@ -7,7 +7,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(picker.open){pic
 document.addEventListener('click',e=>{if(!picker.contains(e.target))picker.open=false;});const wide=matchMedia('(min-width:1051px)');if(wide.addEventListener)wide.addEventListener('change',e=>{if(e.matches)closeMenu();});
 picker.addEventListener('keydown',e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key))return;e.preventDefault();picker.open=true;const links=[...picker.querySelectorAll('[data-language]')],i=links.indexOf(document.activeElement),next=e.key==='Home'?0:e.key==='End'?links.length-1:(i+(e.key==='ArrowDown'?1:-1)+links.length)%links.length;links[next].focus();});
 document.querySelectorAll('[data-language]').forEach(a=>{a.addEventListener('click',()=>{try{if(privacy==='necessary')localStorage.setItem(languageKey,a.dataset.language);}catch{}});});
-if(privacy==='necessary'){try{const storedLanguage=localStorage.getItem(languageKey);const languageHomes={sv:'/sv/',es:'/es/',ca:'/ca/'};if(location.pathname==='/'&&languageHomes[storedLanguage]){location.replace(languageHomes[storedLanguage]);return;}localStorage.setItem(languageKey,lang);}catch{}}panel.hidden=!!privacy;
+if(privacy==='necessary'){try{const storedLanguage=localStorage.getItem(languageKey);const languageHomes={sv:'/sv/',es:'/es/',ca:'/ca/'};if(location.pathname==='/'&&languageHomes[storedLanguage]){location.replace(languageHomes[storedLanguage]);return;}localStorage.setItem(languageKey,lang);}catch{}}panel.hidden=true;
 document.querySelectorAll('[data-privacy]').forEach(b=>b.addEventListener('click',()=>{privacy=b.dataset.privacy;try{localStorage.setItem(privacyKey,JSON.stringify({version:1,choice:privacy}));if(privacy==='necessary')localStorage.setItem(languageKey,lang);else localStorage.removeItem(languageKey);}catch{}panel.hidden=true;document.getElementById('privacy-status').textContent=copy.cookie_saved;}));
 document.querySelectorAll('.privacy-open').forEach(b=>b.addEventListener('click',()=>{panel.hidden=false;panel.querySelector('button').focus();}));
 // Accessible feature accordions: native buttons provide Enter and Space activation.
@@ -68,79 +68,4 @@ form.addEventListener('submit',async e=>{
   clearTimeout(timeout);sending=false;submit.disabled=false;submit.textContent=copy.submit;form.removeAttribute('aria-busy');
  }
 });
-})();
-
-// The decorative stone follows the document, with no pinned scroll or hidden copy.
-(()=>{
- const story=document.querySelector('[data-onyx-story]');
- if(!story||!window.requestAnimationFrame||!window.matchMedia||navigator.connection?.saveData)return;
- const reduced=matchMedia('(prefers-reduced-motion: reduce)'),compact=matchMedia('(max-width:760px)');
- const desktop=story.querySelector('.stone-field .onyx-image'),mobile=story.querySelector('.onyx-mobile .onyx-image');
- const chapters=[...story.querySelectorAll('[data-onyx-chapter]')];
- const field=story.querySelector('.stone-field'),orbit=field.querySelector('.orbit-layer'),toggle=story.querySelector('.orbit-toggle');
- let paused=false;
- const economical=(navigator.hardwareConcurrency||4)<=2;
- function ambient(on){
-  field.classList.toggle('orbit-running',on&&!paused&&!economical&&!compact.matches&&!reduced.matches&&!document.hidden);
- }
- function orbitExit(exit){
-  field.style.setProperty('--orbit-exit',exit.toFixed(3));
-  const hidden=exit>.98;
-  orbit.inert=hidden;orbit.setAttribute('aria-hidden',String(hidden));
-  for(const link of orbit.querySelectorAll('a')){if(hidden)link.setAttribute('tabindex','-1');else link.removeAttribute('tabindex');}
-  toggle.hidden=hidden||reduced.matches||compact.matches||economical;
-  ambient(!hidden);
- }
- toggle.addEventListener('click',()=>{
-  paused=!paused;toggle.setAttribute('aria-pressed',String(paused));
-  toggle.textContent=paused?toggle.dataset.play:toggle.dataset.pause;
-  ambient(near&&parseFloat(field.style.getPropertyValue('--orbit-exit')||0)<.98);
- });
- document.addEventListener('visibilitychange',()=>{ambient(near);queue();});
- const poses=[[0,0,0,1,1],[-16,-10,10,.97,1],[25,10,-14,.94,1],[-27,20,12,.91,1],[-39,36,-16,.76,.25]];
- let frame=0,near=true,enabled=false;
- const limit=(n,a=0,b=1)=>Math.min(b,Math.max(a,n));
- function clear(){
-  orbitExit(0);ambient(false);
-  for(const el of [desktop,mobile,...chapters]){el.style.removeProperty('transform');el.style.removeProperty('opacity');}
- }
- function paint(){
-  frame=0;
-  if(!enabled||!near){ambient(false);return;}
-  const box=story.getBoundingClientRect(),height=innerHeight;
-  if(box.bottom<0||box.top>height){ambient(false);return;}
-  orbitExit(limit(-box.top/Math.max(1,chapters[0].offsetHeight*.65)));
-  if(compact.matches){
-   const t=limit(-box.top/Math.max(1,chapters[0].offsetHeight));
-   mobile.style.transform='rotate('+(-6*t).toFixed(2)+'deg) translateY('+(12*t).toFixed(2)+'px)';
-   return;
-  }
-  const bounds=chapters.map(el=>el.getBoundingClientRect());
-  const centers=bounds.map(r=>r.top+r.height*.42);
-  const focal=height*.47;
-  let i=0;
-  while(i<centers.length-2&&focal>centers[i+1])i++;
-  let t=limit((focal-centers[i])/Math.max(1,centers[i+1]-centers[i]));
-  t=t*t*(3-2*t);
-  const [yaw,y,roll,scale,opacity]=poses[i].map((v,k)=>v+(poses[i+1][k]-v)*t);
-  desktop.style.transform='translate3d(0,'+y.toFixed(2)+'px,0) rotateY('+yaw.toFixed(2)+'deg) rotateZ('+roll.toFixed(2)+'deg) scale('+scale.toFixed(3)+')';
-  desktop.style.opacity=opacity.toFixed(3);
-  for(let j=1;j<chapters.length-1;j++){
-   const el=chapters[j],enter=limit((height-bounds[j].top)/(height*.26));
-   el.style.transform='translateY('+((1-enter)*12).toFixed(1)+'px)';
-   el.style.opacity=(.87+.13*enter).toFixed(3);
-  }
- }
- function queue(){if(enabled&&near&&!frame)frame=requestAnimationFrame(paint);}
- function mode(){
-  clear();enabled=!reduced.matches;queue();
- }
- window.addEventListener('scroll',queue,{passive:true});
- window.addEventListener('resize',queue,{passive:true});
- if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{near=entry.isIntersecting;if(!near)ambient(false);queue();}).observe(story);
- for(const media of [reduced,compact]){
-  if(media.addEventListener)media.addEventListener('change',mode);
-  else if(media.addListener)media.addListener(mode);
- }
- mode();
 })();
