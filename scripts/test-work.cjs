@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),routes=require('../content/routes.json')
 const read=r=>new JSDOM(fs.readFileSync(path.join(root,r,'index.html'),'utf8')).window.document;
 let checks=0;
 for(const lang of ['en','sv','es','ca']){
- const h=read(routes.home[lang]);assert.equal(h.querySelectorAll('.work-card').length,3);assert.equal(h.querySelectorAll('.work-steps>li').length,6);assert.equal(h.querySelectorAll('#primary-navigation>a').length,4);assert.equal(h.querySelector('.landscape-copy .lead').textContent,copy[lang].hero);assert(!h.querySelector('.pilot-section'));checks++;
+ const h=read(routes.home[lang]);assert.equal(h.querySelectorAll('.work-card').length,0);assert.equal(h.querySelectorAll('.work-steps>li').length,6);assert.equal(h.querySelectorAll('#primary-navigation>a').length,4);assert.equal(h.querySelector('.landscape-copy .lead').textContent,copy[lang].hero);assert(!h.querySelector('.pilot-section'));checks++;
  const s=read(routes.services[lang]);assert.equal(s.querySelectorAll('.service-detail').length,3);assert.equal(s.querySelectorAll('.service-brief').length,3);assert(s.querySelector('.pilot-disclosure'));assert(s.querySelectorAll('.feature-toggle').length>=20);checks++;
  for(const key of ['work-crm','work-prospecting','work-brand-transformation']){
   const d=read(routes[key][lang]);assert.equal(d.documentElement.lang,lang);assert.equal(d.querySelectorAll('#primary-navigation>a').length,4);assert.equal(d.querySelectorAll('.language-selector a').length,4);

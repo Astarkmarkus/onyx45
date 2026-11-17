@@ -30,3 +30,7 @@ To update the estimate, obtain an owner-approved replacement, retain `approximat
 Prior published rollback commit: `18934b58f17b39c351a38ee7566426e58dd989ae`. Preserve repository history and use a normal revert if rollback is needed.
 
 Checks: `python3 scripts/verify-static.py`; `NODE_PATH=../tmp/qa/node_modules node scripts/test-work.cjs`; existing `test-contact.cjs`, `test-landscape.cjs`, `test-motion.cjs`. Contact tests mock the provider: no live test enquiry or email-delivery guarantee. Browser QA covers desktop and 390px/320px responsive frames, language switching and project navigation. Deployment is verified separately against GitHub Pages and the public website.
+
+## Homepage simplification — 17 November 2026
+
+Removed the Inside Our Work portfolio section from all four homepages at the owner’s request. The existing project URLs remain valid; their back links now point to the relevant homepage. The renderer no longer recreates the removed section.
