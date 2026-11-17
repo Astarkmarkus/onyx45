@@ -6,7 +6,7 @@ for(const lang of ['en','sv','es','ca'])for(const mode of ['desktop','mobile','r
  let top=0,scheduled=[],media={};w.requestAnimationFrame=fn=>scheduled.push(fn);w.matchMedia=q=>media[q]={matches:q.includes('reduce')?mode==='reduced':mode==='mobile',addEventListener(t,fn){this.change=fn}};
  Object.defineProperty(w.navigator,'connection',{value:{saveData:mode==='save-data'}});
  const hero=d.querySelector('.landscape-hero');hero.getBoundingClientRect=()=>({top,height:800});w.eval(app);
- const flush=()=>{const tasks=scheduled;scheduled=[];tasks.forEach(fn=>fn())};flush();
+ const flush=()=>{let frames=0;while(scheduled.length){assert(++frames<200,"Animation must stop when settled");const tasks=scheduled;scheduled=[];tasks.forEach(fn=>fn())}};flush();
  assert.equal(d.querySelectorAll('#primary-navigation>a').length,4);assert.equal(d.querySelectorAll('[data-onyx-story],.orbit-layer').length,0);
  assert(d.querySelector('.heritage-service-grid').firstElementChild.classList.contains('primary-capability'));
  const word=d.querySelector('.landscape-word'),image=d.querySelector('.landscape-media img');
