@@ -11,3 +11,7 @@ Logo concepts were developed using the built-in image generation tool. The first
 ## Concept generation
 
 Used built-in image generation (not CLI). Prompt: “Concept exploration sheet for ONYX45, an international B2B growth and marketing studio. Three restrained geometric symbol concepts in one horizontal composition, each paired with the exact wordmark ONYX45. Original interlocking cut-square geometry, 45-degree cuts, negative space suggesting a turning point and coordinated forward movement. No generic arrow, no charts, no globe, no stock icons, no resemblance to existing technology logos. Premium editorial modernist identity. Flat vector-like shapes suitable for later accurate SVG construction. Background #11151B, offwhite #F5F7FA and restrained lime #B1FF69 accents. Precise geometry, wide spacing, timeless understated confidence. No mockups, no gradients, no shadows, no extra text.”
+
+## Owner-supplied logo — 17 November 2026
+
+The owner supplied Onyx45logo.png as the current emblem. Optimized square crops preserve its ivory and burgundy artwork and textured background. Fingerprinted derivatives are used for the visible header/footer logo, About emblem, favicon, Apple touch icon and organization metadata. Earlier icon assets are retained for cached pages.
