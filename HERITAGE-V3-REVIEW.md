@@ -15,14 +15,13 @@ The baseline tree matches production commit `63d939b087c88573f382f5f532b7ec8315a
 - Privacy wording acknowledges provider storage and links to its current policy. Existing canonical/hreflang metadata and domain preserved; legal routes added to sitemap.
 - Favicon and social cards use the new palette. No external font requests are needed: Georgia/system serif and Inter/system sans fallbacks.
 
-## Production blockers — business facts, not implementation choices
+## Launch decision — 17 November 2026
 
-1. [LEGAL REVIEW REQUIRED: REGISTERED OPERATOR] Confirm the legal controller/operator name and whether ONYX45 is a trading name. Supply applicable registration/tax information, service address and privacy contact. Add verified facts to the Legal Notice and Privacy Policy in all languages.
-2. [LEGAL REVIEW REQUIRED: RETENTION POLICY] Confirm the actual Web3Forms plan/retention setting, mailbox retention, any onward CRM or other storage, and who handles deletion. A provider maximum is not ONYX45’s own retention policy.
-3. Verify enabled provider spam processors/integrations, applicable DPA and transfer safeguards against the real account; the repository cannot establish dashboard settings.
-4. Confirm actual receipt in the intended mailbox. Frontend mocks do not verify delivery. No additional real email was sent in this change.
+The owner supplied the organisation identifier and explicitly instructed production launch with the callback notice and GDPR-based handling. This instruction supersedes the earlier draft hold. The supplied identifier appears in the legal/privacy pages and footer; no full legal name or service address has been invented.
 
-Do not merge this branch into the GitHub Pages publishing branch until these items are resolved and reviewed. No DNS, email routing or Cloudflare account configuration was changed.
+The contact form now requires a telephone number and explicitly requests a call about the enquiry. The notice appears next to submission and in the footer in all four languages. It does not opt the visitor into unrelated marketing. Retention uses purpose-based criteria rather than inventing a universal period or claiming automated mailbox/provider deletion.
+
+Remaining verification limits: full registered operator name and service address are not supplied; actual Web3Forms retention/spam/integration settings, account-specific transfer arrangements and mailbox delivery are not independently verified. The published text does not claim that provider storage is absent or that automatic erasure is configured. No DNS, email routing or Cloudflare account setting is changed.
 
 ## Processing flow and deletion review
 

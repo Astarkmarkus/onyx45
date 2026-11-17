@@ -23,7 +23,10 @@
     "legalLabel": "Legal",
     "operator": "Business information",
     "legalIntro": "ONYX45 is a business consultancy brand. For enquiries about our services or this website, contact us using the details below.",
-    "privacy": "By submitting this form, you acknowledge that ONYX45 will use the information provided to respond to your enquiry. Read our Privacy Policy."
+    "privacy": "By submitting this form, you acknowledge that ONYX45 will use the information provided to respond to your enquiry. Read our Privacy Policy.",
+    "callbackNotice": "By submitting the form, you request a call from ONYX45 about your enquiry. We use your contact details to call you and may email you to arrange or follow up the conversation. Read our Privacy Policy.",
+    "telephoneRequired": true,
+    "submit": "Request a Call"
   },
   "sv": {
     "label": "B2B Tillväxt & Affärsutveckling",
@@ -49,7 +52,10 @@
     "legalLabel": "Juridik",
     "operator": "Kontaktuppgifter",
     "legalIntro": "ONYX45 är ett varumärke för affärsrådgivning. Kontakta oss via uppgifterna nedan för frågor om våra tjänster eller webbplatsen.",
-    "privacy": "När du skickar formuläret bekräftar du att ONYX45 använder uppgifterna för att besvara din förfrågan. Läs vår integritetspolicy."
+    "privacy": "När du skickar formuläret bekräftar du att ONYX45 använder uppgifterna för att besvara din förfrågan. Läs vår integritetspolicy.",
+    "callbackNotice": "När du skickar formuläret ber du ONYX45 att ringa dig om din förfrågan. Vi använder dina kontaktuppgifter för att ringa och kan mejla för att boka eller följa upp samtalet. Läs vår integritetspolicy.",
+    "telephoneRequired": true,
+    "submit": "Be om att bli uppringd"
   },
   "es": {
     "label": "Consultoría B2B de Crecimiento y Negocio",
@@ -75,7 +81,10 @@
     "legalLabel": "Legal",
     "operator": "Información de contacto",
     "legalIntro": "ONYX45 es una marca de consultoría empresarial. Para consultas sobre nuestros servicios o este sitio web, utiliza los datos de contacto siguientes.",
-    "privacy": "Al enviar este formulario, reconoces que ONYX45 utilizará la información facilitada para responder a tu consulta. Lee nuestra Política de privacidad."
+    "privacy": "Al enviar este formulario, reconoces que ONYX45 utilizará la información facilitada para responder a tu consulta. Lee nuestra Política de privacidad.",
+    "callbackNotice": "Al enviar el formulario, solicitas una llamada de ONYX45 sobre tu consulta. Utilizamos tus datos para llamarte y podemos enviarte un correo para organizar o seguir la conversación. Lee nuestra Política de privacidad.",
+    "telephoneRequired": true,
+    "submit": "Solicitar una llamada"
   },
   "ca": {
     "label": "Consultoria B2B de Creixement i Negoci",
@@ -101,6 +110,9 @@
     "legalLabel": "Legal",
     "operator": "Informació de contacte",
     "legalIntro": "ONYX45 és una marca de consultoria empresarial. Per a consultes sobre els nostres serveis o aquest lloc web, utilitza les dades de contacte següents.",
-    "privacy": "En enviar aquest formulari, reconeixes que ONYX45 utilitzarà la informació facilitada per respondre la teva consulta. Llegeix la nostra Política de privacitat."
+    "privacy": "En enviar aquest formulari, reconeixes que ONYX45 utilitzarà la informació facilitada per respondre la teva consulta. Llegeix la nostra Política de privacitat.",
+    "callbackNotice": "En enviar el formulari, sol·licites una trucada d’ONYX45 sobre la teva consulta. Utilitzem les dades per trucar-te i podem enviar-te un correu per organitzar o seguir la conversa. Llegeix la nostra Política de privacitat.",
+    "telephoneRequired": true,
+    "submit": "Sol·licita una trucada"
   }
 }
